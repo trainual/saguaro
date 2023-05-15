@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "5.3.3"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.12",
@@ -38,5 +39,17 @@
     "storybook": "^7.0.12",
     "typescript": "^5.0.2",
     "vite": "^4.3.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/saguaro.umd.js",
+  "module": "./dist/saguaro.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/saguaro.es.js",
+      "require": "./dist/saguaro.umd.js"
+    }
   }
 }
