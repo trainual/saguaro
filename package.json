@@ -2,6 +2,19 @@
   "name": "saguaro",
   "private": true,
   "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/saguaro.umd.js",
+  "module": "./dist/saguaro.es.js",
+  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/saguaro.es.js",
+      "require": "./dist/saguaro.umd.js"
+    }
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -40,17 +53,5 @@
     "typescript": "^5.0.2",
     "vite": "^4.3.2",
     "vite-plugin-dts": "^2.3.0"
-  },
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/saguaro.umd.js",
-  "module": "./dist/saguaro.es.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/saguaro.es.js",
-      "require": "./dist/saguaro.umd.js"
-    }
   }
 }
