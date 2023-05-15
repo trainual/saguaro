@@ -2,9 +2,8 @@ import BorderPreview from "./BorderPreview";
 import { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Design System/Design System/Styles/Border Preview",
-  component: BorderPreview,
-  tags: ["autodocs"],
+  title: "Design Tokens/Borders",
+  component: BorderPreview
 } satisfies Meta<typeof BorderPreview>;
 
 export default meta;
