@@ -26,7 +26,7 @@ interface SaguaroButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const SaguaroButton = ({
+const SaguaroButton = ({
   primary = false,
   size = 'medium',
   backgroundColor,
@@ -45,3 +45,5 @@ export const SaguaroButton = ({
     </button>
   );
 };
+
+export default SaguaroButton;

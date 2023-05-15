@@ -1,4 +1,4 @@
-import { SaguaroButton } from './Button';
+import SaguaroButton from './SaguaroButton';
 import './header.css';
 
 type User = {
