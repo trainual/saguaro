@@ -1,4 +1,4 @@
-import { Button } from './Button';
+import { SaguaroButton } from './Button';
 import './header.css';
 
 type User = {
@@ -40,12 +40,12 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
             <span className="welcome">
               Welcome, <b>{user.name}</b>!
             </span>
-            <Button size="small" onClick={onLogout} label="Log out" />
+            <SaguaroButton size="small" onClick={onLogout} label="Log out" />
           </>
         ) : (
           <>
-            <Button size="small" onClick={onLogin} label="Log in" />
-            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
+            <SaguaroButton size="small" onClick={onLogin} label="Log in" />
+            <SaguaroButton primary size="small" onClick={onCreateAccount} label="Sign up" />
           </>
         )}
       </div>
