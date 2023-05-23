@@ -2,10 +2,9 @@
 import React, { useEffect } from 'react';
 import { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
-import { DefaultTheme } from "styled-components";
 import { useDarkMode } from "storybook-dark-mode";
 
-import StyleScene from '../src/lib/components/StyleScene';
+import TokenThemeProvider from '../src/lib/components/TokenThemeProvider';
 
 import { 
   useBorderTokens,
@@ -91,9 +90,9 @@ const preview: Preview = {
       };
 
       return (
-        <StyleScene mode={mode} brandOption={context.globals.brand}>
+        <TokenThemeProvider mode={mode} brandOption={context.globals.brand}>
           <Story />
-        </StyleScene> 
+        </TokenThemeProvider> 
       )
     },
   ],

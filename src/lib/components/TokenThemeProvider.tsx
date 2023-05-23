@@ -26,7 +26,7 @@ type Props = {
   brandOption: PaletteOption | string;
 };
 
-const StyleScene = ({ brandOption, mode, children }: Props) => {
+const TokenThemeProvider = ({ brandOption, mode, children }: Props) => {
   const borderTokens = useBorderTokens();
   const fontTokens = useFontTokens();
   const spacingTokens = useSpacingTokens();
@@ -37,7 +37,7 @@ const StyleScene = ({ brandOption, mode, children }: Props) => {
     ...spacingTokens,
   };
 
-  const theme: DefaultTheme = { constants, vars: colorTokens };
+  const theme: DefaultTheme = { constants, mode, brand: brandOption, vars: colorTokens };
 
   return (
     <>
@@ -47,4 +47,4 @@ const StyleScene = ({ brandOption, mode, children }: Props) => {
   );
 };
 
-export default StyleScene;
+export default TokenThemeProvider;

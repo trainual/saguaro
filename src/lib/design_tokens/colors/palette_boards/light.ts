@@ -1,4 +1,4 @@
-import PaletteBoard from "../../../types/PaletteBoard";
+import { CorePaletteBoard } from "../../../types/PaletteBoard";
 import aquamarine from "../palettes/aquamarine/light";
 import blue from "../palettes/blue/light";
 import green from "../palettes/green/light";
@@ -25,4 +25,5 @@ export default {
 	red,
 	teal,
 	violet
-} as PaletteBoard;
+} as CorePaletteBoard;
+
