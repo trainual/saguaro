@@ -24,6 +24,45 @@ export const parameters = {
   },
 };
 
+export const globalTypes = {
+  brand: {
+    name: "Brand",
+    description: "Set the brand color",
+    defaultValue: "#6A28EA",
+    toolbar: {
+      icon: "paintbrush",
+      items: [
+        { title: "Custom | #6A28EA (Trainual Purple)", value: "#6A28EA" },
+        { title: "Custom | #482D8C (Old Trainual Purple)", value: "#482D8C" },
+        {
+          title: "Custom | #472EAD (Really Old Trainual Purple)",
+          value: "#472EAD",
+        },
+        { title: "Custom | #010001 (dark purple)", value: "#010001" },
+        { title: "Custom | #245EA7 (blue)", value: "#245EA7" },
+        { title: "Custom | #232C45 (dark blue)", value: "#232C45" },
+        { title: "Custom | #AE2C29 (red)", value: "#AE2C29" },
+        { title: "Custom | #3A9E55 (green)", value: "#3A9E55" },
+        { title: "Custom | #F8BD1C (yellow)", value: "#F8BD1C" },
+        { title: "Custom | #FA9522 (orange)", value: "#FA9522" },
+        { title: "Custom | #000000 (black)", value: "#000000" },
+        { title: "Palette | Blue", value: "blue" },
+        { title: "Palette | Green", value: "green" },
+        { title: "Palette | Grey", value: "grey" },
+        { title: "Palette | Magenta", value: "magenta" },
+        { title: "Palette | Neutral", value: "neutral" },
+        { title: "Palette | Ocre", value: "ocre" },
+        { title: "Palette | Orange", value: "orange" },
+        { title: "Palette | Purple", value: "purple" },
+        { title: "Palette | Red", value: "red" },
+        { title: "Palette | Teal", value: "teal" },
+        { title: "Palette | Violet", value: "violet" },
+      ],
+      showName: false,
+    },
+  },
+};
+
 const preview: Preview = {
   decorators: [
     (Story, context) => {
@@ -50,10 +89,9 @@ const preview: Preview = {
         ...fontTokens,
         ...spacingTokens,
       };
-      const theme: DefaultTheme = { constants, vars: colorTokens };
-      
+
       return (
-        <StyleScene mode={mode} brandOption={'violet'}>
+        <StyleScene mode={mode} brandOption={context.globals.brand}>
           <Story />
         </StyleScene> 
       )
