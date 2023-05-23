@@ -11,15 +11,15 @@ type Palette = {
   "70": string;
   "80": string;
   "90": string;
-  transparent1: string;
-  transparent2: string;
-  transparent3: string;
 };
 
 export type LimitedPalette = Omit<Palette, 'transparent1' | 'transparent2' | 'transparent3'>;
 
 export type ExpandedPalette = Palette & {
   "25": string;
+  transparent1: string;
+  transparent2: string;
+  transparent3: string;
 }
 
 export default Palette;

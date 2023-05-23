@@ -1,9 +1,33 @@
+import { darken, lighten } from 'polished';
 import ColorTokens from "../../../types/ColorTokens"
 import PaletteOption from "../../../types/PaletteOption";
 import PaletteBoard from '../../../design_tokens/colors/palette_boards/light'
+import Palette from "../../../types/Palette";
+import { ensureHex, isPalette } from '../../../helpers/color';
 
-const useLightTokens = (brandOption: PaletteOption): ColorTokens => {
-	const brand = PaletteBoard[brandOption];
+function programmaticPalette(color: string) {
+	ensureHex(color);
+	return {
+		'00': lighten(0.36, color),
+		'05': lighten(0.32, color),
+		'10': lighten(0.27, color),
+		'15': lighten(0.14, color),
+		'20': lighten(0.1, color),
+		'30': lighten(0.0, color),
+		'40': darken(0.07, color),
+		'50': darken(0.14, color),
+		'60': darken(0.2, color),
+		'70': darken(0.25, color),
+		'80': darken(0.31, color),
+		'90': darken(0.36, color),
+	} as Palette;
+}
+
+const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
+	const brand = isPalette(brandOption) 
+		? PaletteBoard[brandOption] 
+		: programmaticPalette(brandOption);
+
 	const {
 		aquamarine,
 		blue,

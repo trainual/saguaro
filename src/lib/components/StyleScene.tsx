@@ -10,6 +10,7 @@ import useColorTokens from "../hooks/useColorTokens";
 import useBorderTokens from "../hooks/useBorderTokens";
 import useSpacingTokens from "../hooks/useSpacingTokens";
 import useFontTokens from "../hooks/useFontTokens";
+import PaletteOption from "../types/PaletteOption";
 
 const GlobalFonts = createGlobalStyle`
   body * {
@@ -20,27 +21,23 @@ const GlobalFonts = createGlobalStyle`
 `;
 
 type Props = {
-  // Style mode is optional to allow overriding the style mode in scenarios where the current user info is not available
-  // This is useful for the public share, storybook and vite tests.
-  mode?: StyleMode;
+  mode: StyleMode;
   children: ReactNode;
-  usePublicBrandStyles?: boolean;
-  accentPalette: string | null;
-  accentColor: string;
+  brandOption: PaletteOption | string;
 };
 
-const StyleScene = ({ children }: Props) => {
+const StyleScene = ({ brandOption, mode, children }: Props) => {
   const borderTokens = useBorderTokens();
   const fontTokens = useFontTokens();
   const spacingTokens = useSpacingTokens();
-  const colorTokens = useColorTokens('violet', 'light');
+  const colorTokens = useColorTokens(brandOption, mode);
   const constants = {
     ...borderTokens,
     ...fontTokens,
     ...spacingTokens,
   };
 
-  const theme: DefaultTheme = { constants, colors: colorTokens };
+  const theme: DefaultTheme = { constants, vars: colorTokens };
 
   return (
     <>

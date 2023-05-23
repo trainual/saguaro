@@ -1,13 +1,12 @@
 import styled, { useTheme } from 'styled-components';
 
 const BorderText = styled.td`
-  color: darkgray;
+  color: ${({ theme: { vars } }) => vars.textDefault};
   font-size: 0.9rem;
 `;
 
 const BorderCell = styled.td<{ radius: string; width: string }>`
-  background-color: white;
-  border-color: black;
+  border-color: ${({ theme: { vars } }) => vars.borderDefault};
   border-radius: ${({ radius }) => radius};
   border-width: ${({ width }) => width};
   border-style: solid;

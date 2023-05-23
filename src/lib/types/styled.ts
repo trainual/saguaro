@@ -9,6 +9,6 @@ type ConstantTokens = BorderTokens & FontTokens & SpacingTokens;
 declare module "styled-components" {
   export interface DefaultTheme {
     constants: ConstantTokens;
-    colors: ColorTokens;
+    vars: ColorTokens;
   }
 }

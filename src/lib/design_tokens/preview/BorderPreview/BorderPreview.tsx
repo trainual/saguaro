@@ -9,7 +9,7 @@ const SpacedTable = styled(StyleTable)`
 `;
 
 const BorderHeaderCell = styled.th`
-  color: gray;
+  color: ${({ theme: { vars } }) => vars.textDefault};
   font-size: 0.9rem;
   font-weight: normal;
 `;

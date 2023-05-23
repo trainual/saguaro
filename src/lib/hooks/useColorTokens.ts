@@ -4,7 +4,7 @@ import useDarkTokens from './themes/default/useDarkTokens';
 import useLightTokens from './themes/default/useLightTokens';
 import ColorTokens from "../types/ColorTokens";
 
-const useColorTokens = (brand: PaletteOption, mode: StyleMode): ColorTokens => {
+const useColorTokens = (brand: PaletteOption | string, mode: StyleMode): ColorTokens => {
 	const lightTokens = useLightTokens(brand);
 	const darkTokens = useDarkTokens(brand);
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyleTable = styled.table``;
 
 const SoftText = styled.div`
-  color: darkgray;
+  color: ${({ theme: { vars } }) => vars.textDefault};
   font-size: 0.75rem;
   font-style: italic;
   padding-left: 10px;
@@ -11,7 +11,7 @@ const SoftText = styled.div`
 `;
 
 const MainTitle = styled.div`
-  color: darkgray;
+  color: ${({ theme: { vars } }) => vars.textDefault};
   font-size: 1.5rem;
   text-align: left;
 `;
