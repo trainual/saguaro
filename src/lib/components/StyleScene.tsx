@@ -5,8 +5,11 @@ import {
   createGlobalStyle,
 } from "styled-components";
 
-import constants from "../design_tokens/constants";
-import { StyleMode } from "../types/StyleConfiguration";
+import StyleMode from "../types/StyleMode";
+import useColorTokens from "../hooks/useColorTokens";
+import useBorderTokens from "../hooks/useBorderTokens";
+import useSpacingTokens from "../hooks/useSpacingTokens";
+import useFontTokens from "../hooks/useFontTokens";
 
 const GlobalFonts = createGlobalStyle`
   body * {
@@ -27,7 +30,17 @@ type Props = {
 };
 
 const StyleScene = ({ children }: Props) => {
-  const theme: DefaultTheme = { constants };
+  const borderTokens = useBorderTokens();
+  const fontTokens = useFontTokens();
+  const spacingTokens = useSpacingTokens();
+  const colorTokens = useColorTokens('violet', 'light');
+  const constants = {
+    ...borderTokens,
+    ...fontTokens,
+    ...spacingTokens,
+  };
+
+  const theme: DefaultTheme = { constants, colors: colorTokens };
 
   return (
     <>
