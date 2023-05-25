@@ -21,6 +21,7 @@
 	foundationHover: string,
 	icon1: string,
 	icon2: string,
+	iconSurface: string,
 	iconOverdue: string,
 	iconActive: string,
 	textPlaceholder: string,

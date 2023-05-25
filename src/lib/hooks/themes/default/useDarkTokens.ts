@@ -51,6 +51,7 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
 		// Icon
 		icon1: neutral[80],
 		icon2: neutral[90],
+		iconSurface: neutral['00'],
 
 		// Text
 		textPlaceholder: neutral[40],
