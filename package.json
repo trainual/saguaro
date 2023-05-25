@@ -26,11 +26,9 @@
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
   },
   "dependencies": {
-    "polished": "^4.2.2"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "polished": "^4.2.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "styled-components": "5.3.3"
   },
   "devDependencies": {
