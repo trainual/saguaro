@@ -9,6 +9,7 @@ export { default as useBorderTokens } from './hooks/useBorderTokens'
 export { default as useColorTokens } from './hooks/useColorTokens'
 export { default as useFontTokens } from './hooks/useFontTokens'
 export { default as useSpacingTokens } from './hooks/useSpacingTokens'
+export { default as useTokenTheme } from './hooks/useTokenTheme'
 
 // Styled Components Integrations
 export type { default as TokenTheme } from './types/TokenTheme';

@@ -1,7 +1,8 @@
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 
 import BorderRow from '../BorderRow/BorderRow';
 import StyleTable, { StyleGroupBody, StyleGroupHeader } from '../StyleTable/StyleTable';
+import useTokenTheme from '../../../hooks/useTokenTheme';
 
 const SpacedTable = styled(StyleTable)`
   border-spacing: 20px;
@@ -41,7 +42,9 @@ const BorderPreview = () => {
       borderRadiusCircle,
       borderRadiusEndcap,
     },
-  } = useTheme();
+  } = useTokenTheme();
+
+
   return (
     <SpacedTable>
       <StyleGroupHeader title='Borders' />

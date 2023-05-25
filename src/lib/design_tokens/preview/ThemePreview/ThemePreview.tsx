@@ -1,5 +1,4 @@
-import { useTheme } from 'styled-components';
-
+import useTokenTheme from "../../../hooks/useTokenTheme";
 import ColorRow from "../ColorRow/ColorRow";
 import StyleTable, {
   StyleGroupBody,
@@ -7,7 +6,7 @@ import StyleTable, {
 } from "../StyleTable/StyleTable";
 
 const ThemePreview = () => {
-  const { vars } = useTheme();
+  const { vars } = useTokenTheme();
   return (
     <StyleTable>
       <StyleGroupHeader
