@@ -10,7 +10,7 @@ import useBorderTokens from '../hooks/useBorderTokens';
 import useSpacingTokens from '../hooks/useSpacingTokens';
 import useFontTokens from '../hooks/useFontTokens';
 import PaletteOption from '../types/PaletteOption';
-import TokenTheme from '../types/TokenTheme';
+import SaguaroTheme from '../types/SaguaroTheme';
 
 const GlobalFonts = createGlobalStyle`
   body * {
@@ -26,7 +26,7 @@ type Props = {
   brandOption: PaletteOption | string;
 };
 
-const TokenThemeProvider = ({ brandOption, mode, children }: Props) => {
+const SaguaroThemeProvider = ({ brandOption, mode, children }: Props) => {
   const borderTokens = useBorderTokens();
   const fontTokens = useFontTokens();
   const spacingTokens = useSpacingTokens();
@@ -37,7 +37,7 @@ const TokenThemeProvider = ({ brandOption, mode, children }: Props) => {
     ...spacingTokens,
   };
 
-  const theme: TokenTheme = { constants, mode, brand: brandOption, vars: colorTokens };
+  const theme: SaguaroTheme = { constants, mode, brand: brandOption, vars: colorTokens };
 
   return (
     <>
@@ -47,4 +47,4 @@ const TokenThemeProvider = ({ brandOption, mode, children }: Props) => {
   );
 };
 
-export default TokenThemeProvider;
+export default SaguaroThemeProvider;

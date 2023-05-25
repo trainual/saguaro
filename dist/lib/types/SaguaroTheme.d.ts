@@ -4,14 +4,14 @@ import FontTokens from './FontTokens';
 import SpacingTokens from './SpacingTokens';
 import StyleMode from './StyleMode';
 type ConstantTokens = BorderTokens & FontTokens & SpacingTokens;
-interface TokenTheme {
+interface SaguaroTheme {
     constants: ConstantTokens;
     mode: StyleMode;
     vars: ColorTokens;
     brand: string;
 }
 declare module 'styled-components' {
-    interface DefaultTheme extends TokenTheme {
+    interface DefaultTheme extends SaguaroTheme {
     }
 }
-export default TokenTheme;
+export default SaguaroTheme;

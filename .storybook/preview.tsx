@@ -4,7 +4,7 @@ import { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
 import { useDarkMode } from "storybook-dark-mode";
 
-import TokenThemeProvider from '../src/lib/components/TokenThemeProvider';
+import SaguaroThemeProvider from '../src/lib/components/SaguaroThemeProvider';
 
 import { 
   useBorderTokens,
@@ -81,9 +81,9 @@ const preview: Preview = {
       }, [useDarkMode()]);
 
       return (
-        <TokenThemeProvider mode={mode} brandOption={context.globals.brand}>
+        <SaguaroThemeProvider mode={mode} brandOption={context.globals.brand}>
           <Story />
-        </TokenThemeProvider> 
+        </SaguaroThemeProvider> 
       )
     },
   ],

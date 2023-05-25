@@ -2,10 +2,10 @@
 import ColorRow from '../ColorRow/ColorRow';
 import StyleTable, { StyleGroupBody, StyleGroupHeader } from '../StyleTable/StyleTable';
 import usePaletteBoard from '../../../hooks/usePaletteBoard';
-import useTokenTheme from '../../../hooks/useTokenTheme';
+import useSaguaroTheme from '../../../hooks/useSaguaroTheme';
 
 const PalettePreview = () => {
-  const { mode, brand: brandOption } = useTokenTheme();
+  const { mode, brand: brandOption } = useSaguaroTheme();
   const {
     brand,
     aquamarine,

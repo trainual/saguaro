@@ -1,4 +1,4 @@
-import useTokenTheme from "../../../hooks/useTokenTheme";
+import useSaguaroTheme from "../../../hooks/useSaguaroTheme";
 import ColorRow from "../ColorRow/ColorRow";
 import StyleTable, {
   StyleGroupBody,
@@ -6,7 +6,7 @@ import StyleTable, {
 } from "../StyleTable/StyleTable";
 
 const ThemePreview = () => {
-  const { vars } = useTokenTheme();
+  const { vars } = useSaguaroTheme();
   return (
     <StyleTable>
       <StyleGroupHeader

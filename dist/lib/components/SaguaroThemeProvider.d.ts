@@ -6,5 +6,5 @@ type Props = {
     children: ReactNode;
     brandOption: PaletteOption | string;
 };
-declare const TokenThemeProvider: ({ brandOption, mode, children }: Props) => import("react/jsx-runtime").JSX.Element;
-export default TokenThemeProvider;
+declare const SaguaroThemeProvider: ({ brandOption, mode, children }: Props) => import("react/jsx-runtime").JSX.Element;
+export default SaguaroThemeProvider;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import BorderRow from '../BorderRow/BorderRow';
 import StyleTable, { StyleGroupBody, StyleGroupHeader } from '../StyleTable/StyleTable';
-import useTokenTheme from '../../../hooks/useTokenTheme';
+import useSaguaroTheme from '../../../hooks/useSaguaroTheme';
 
 const SpacedTable = styled(StyleTable)`
   border-spacing: 20px;
@@ -42,7 +42,7 @@ const BorderPreview = () => {
       borderRadiusCircle,
       borderRadiusEndcap,
     },
-  } = useTokenTheme();
+  } = useSaguaroTheme();
 
 
   return (

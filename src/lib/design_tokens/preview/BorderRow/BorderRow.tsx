@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import useTokenTheme from '../../../hooks/useTokenTheme';
+import useSaguaroTheme from '../../../hooks/useSaguaroTheme';
 
 const BorderText = styled.td`
   color: ${({ theme: { vars } }) => vars.textDefault};
@@ -31,7 +31,7 @@ const BorderRow = ({ radius, text }: Props) => {
       borderWidthXl,
       borderWidth2xl,
     },
-  } = useTokenTheme();
+  } = useSaguaroTheme();
 
   return (
     <tr>
