@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
-import StyleMode from "../types/StyleMode";
-import PaletteOption from "../types/PaletteOption";
+import { ReactNode } from 'react';
+import StyleMode from '../types/StyleMode';
+import PaletteOption from '../types/PaletteOption';
 type Props = {
     mode: StyleMode;
     children: ReactNode;

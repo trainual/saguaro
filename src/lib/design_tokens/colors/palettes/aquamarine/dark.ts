@@ -1,4 +1,4 @@
-import { LimitedPalette } from "../../../../types/Palette";
+import Palette from "../../../../types/Palette";
 
 export default {
   "00": "#61D2B0",
@@ -13,5 +13,8 @@ export default {
   "70": "#3AB993",
   "80": "#3AB993",
   "90": "#3AB993",
-} as LimitedPalette;
+  transparent1: "rgba(97, 210, 176, 0.05)",
+  transparent2: "rgba(97, 210, 176, 0.1)",
+  transparent3: "rgba(97, 210, 176, 0.25)",
+} as Palette;
 

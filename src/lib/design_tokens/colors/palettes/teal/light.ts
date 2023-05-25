@@ -1,6 +1,7 @@
 import Palette from "../../../../types/Palette"
 
 export default {
+	'00': '#D3F4FF',
 	'05': '#A8E9FF',
 	'10': '#81DFFF',
 	'15': '#50CCF5',
@@ -12,4 +13,7 @@ export default {
 	'70': '#005571',
 	'80': '#004055',
 	'90': '#072B36',
+  transparent1: 'rgba(0, 120, 160, 0.05)',
+  transparent2: 'rgba(0, 120, 160, 0.1)',
+  transparent3: 'rgba(0, 120, 160, 0.25)',
 } as Palette;

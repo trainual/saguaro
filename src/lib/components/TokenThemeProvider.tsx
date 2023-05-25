@@ -1,16 +1,16 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 import {
-  DefaultTheme,
   ThemeProvider,
   createGlobalStyle,
-} from "styled-components";
+} from 'styled-components';
 
-import StyleMode from "../types/StyleMode";
-import useColorTokens from "../hooks/useColorTokens";
-import useBorderTokens from "../hooks/useBorderTokens";
-import useSpacingTokens from "../hooks/useSpacingTokens";
-import useFontTokens from "../hooks/useFontTokens";
-import PaletteOption from "../types/PaletteOption";
+import StyleMode from '../types/StyleMode';
+import useColorTokens from '../hooks/useColorTokens';
+import useBorderTokens from '../hooks/useBorderTokens';
+import useSpacingTokens from '../hooks/useSpacingTokens';
+import useFontTokens from '../hooks/useFontTokens';
+import PaletteOption from '../types/PaletteOption';
+import TokenTheme from '../types/TokenTheme';
 
 const GlobalFonts = createGlobalStyle`
   body * {
@@ -37,7 +37,7 @@ const TokenThemeProvider = ({ brandOption, mode, children }: Props) => {
     ...spacingTokens,
   };
 
-  const theme: DefaultTheme = { constants, mode, brand: brandOption, vars: colorTokens };
+  const theme: TokenTheme = { constants, mode, brand: brandOption, vars: colorTokens };
 
   return (
     <>

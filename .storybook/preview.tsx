@@ -80,15 +80,6 @@ const preview: Preview = {
         }
       }, [useDarkMode()]);
 
-      const borderTokens = useBorderTokens();
-      const fontTokens = useFontTokens();
-      const spacingTokens = useSpacingTokens();
-      const constants = {
-        ...borderTokens,
-        ...fontTokens,
-        ...spacingTokens,
-      };
-
       return (
         <TokenThemeProvider mode={mode} brandOption={context.globals.brand}>
           <Story />

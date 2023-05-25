@@ -1,4 +1,3 @@
-
 // Types
 export type { default as BorderTokens } from './types/BorderTokens'
 export type { default as ColorTokens } from './types/ColorTokens'
@@ -11,4 +10,6 @@ export { default as useColorTokens } from './hooks/useColorTokens'
 export { default as useFontTokens } from './hooks/useFontTokens'
 export { default as useSpacingTokens } from './hooks/useSpacingTokens'
 
+// Styled Components Integrations
+export type { default as TokenTheme } from './types/TokenTheme';
 export { default as TokenThemeProvider } from './components/TokenThemeProvider'
