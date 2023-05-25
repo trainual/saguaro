@@ -1,3 +1,2 @@
-import SaguaroTheme from "../types/SaguaroTheme";
-declare const useSaguaroTheme: () => SaguaroTheme;
+declare const useSaguaroTheme: () => import("styled-components").DefaultTheme;
 export default useSaguaroTheme;
