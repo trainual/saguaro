@@ -1197,6 +1197,7 @@ const ka = (a, e) => ta(e) ? a[e] : (aa(e), _a(e)), rr = (a, e) => {
     // Icon
     icon1: t[80],
     icon2: t[90],
+    iconSurface: t["00"],
     // Text
     textPlaceholder: t[40],
     textDefault: t[70],
@@ -1410,6 +1411,7 @@ const ka = (a, e) => ta(e) ? a[e] : (aa(e), _a(e)), rr = (a, e) => {
     // Icon
     icon1: t[70],
     icon2: t[80],
+    iconSurface: t["00"],
     // Text
     textPlaceholder: t[40],
     textDefault: t[80],
