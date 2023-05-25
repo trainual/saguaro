@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-import useSaguaroTheme from '../../../hooks/useSaguaroTheme';
+import styled, { useTheme } from 'styled-components';
 
 const BorderText = styled.td`
   color: ${({ theme: { vars } }) => vars.textDefault};
@@ -31,7 +30,7 @@ const BorderRow = ({ radius, text }: Props) => {
       borderWidthXl,
       borderWidth2xl,
     },
-  } = useSaguaroTheme();
+  } = useTheme();
 
   return (
     <tr>

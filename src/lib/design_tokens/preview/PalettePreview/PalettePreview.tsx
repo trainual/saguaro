@@ -1,11 +1,11 @@
 
+import { useTheme } from 'styled-components';
 import ColorRow from '../ColorRow/ColorRow';
 import StyleTable, { StyleGroupBody, StyleGroupHeader } from '../StyleTable/StyleTable';
 import usePaletteBoard from '../../../hooks/usePaletteBoard';
-import useSaguaroTheme from '../../../hooks/useSaguaroTheme';
 
 const PalettePreview = () => {
-  const { mode, brand: brandOption } = useSaguaroTheme();
+  const { mode, brand: brandOption } = useTheme();
   const {
     brand,
     aquamarine,

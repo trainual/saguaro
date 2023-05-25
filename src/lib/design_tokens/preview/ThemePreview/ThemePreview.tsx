@@ -1,4 +1,4 @@
-import useSaguaroTheme from "../../../hooks/useSaguaroTheme";
+import { useTheme } from "styled-components";
 import ColorRow from "../ColorRow/ColorRow";
 import StyleTable, {
   StyleGroupBody,
@@ -6,7 +6,7 @@ import StyleTable, {
 } from "../StyleTable/StyleTable";
 
 const ThemePreview = () => {
-  const { vars } = useSaguaroTheme();
+  const { vars } = useTheme();
   return (
     <StyleTable>
       <StyleGroupHeader
