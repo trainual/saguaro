@@ -1,4 +1,6 @@
-<img src="./logo.svg" width="100">
+<p align="center">
+	<img src="./logo.svg" width="200">
+</p>
 
 # saguaro
 Trainual's Design System
