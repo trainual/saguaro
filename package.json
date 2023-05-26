@@ -23,6 +23,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "deploy-storybook": "storybook-to-aws-s3 --bucket-path trainual-storybook-saguaro --aws-profile NONE",
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
   },
   "dependencies": {
@@ -40,6 +41,7 @@
     "@storybook/react": "^7.0.12",
     "@storybook/react-vite": "^7.0.12",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@swc/plugin-styled-components": "^1.5.66",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
@@ -55,7 +57,6 @@
     "prop-types": "^15.8.1",
     "storybook": "^7.0.14",
     "storybook-dark-mode": "^3.0.0",
-    "@storybook/storybook-deployer": "^2.8.16",
     "typescript": "^5.0.2",
     "vite": "^4.3.2",
     "vite-plugin-babel-macros": "1.0.5",
