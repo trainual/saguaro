@@ -161,6 +161,7 @@
 	progressColorFair: string,
 	progressColorGood: string,
 	focusOutlineColor: string,
+	oneOffGreyPleaseDoNotUse: string,
 }
 
 export default ColorTokens;

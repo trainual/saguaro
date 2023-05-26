@@ -232,6 +232,9 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
     badgeInfo: core.stateInfo,
 
     logoBkgColor: core.foundationSurface1,
+
+		// To Deprecate
+		oneOffGreyPleaseDoNotUse: grey['00']
   };
 		
 	return {

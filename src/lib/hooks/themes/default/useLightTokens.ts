@@ -216,6 +216,9 @@ const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
 
     // A11y
     focusOutlineColor: "#99C8FF",
+
+		// To Deprecate
+		oneOffGreyPleaseDoNotUse: grey['00']
 	};
 
 	const extended = {
