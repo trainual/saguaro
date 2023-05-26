@@ -218,7 +218,7 @@ const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
     focusOutlineColor: "#99C8FF",
 
 		// To Deprecate
-		oneOffGreyPleaseDoNotUse: grey['00']
+		oneOffOchrePleaseDoNotUse: ochre['05']
 	};
 
 	const extended = {

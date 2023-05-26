@@ -234,7 +234,7 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
     logoBkgColor: core.foundationSurface1,
 
 		// To Deprecate
-		oneOffGreyPleaseDoNotUse: grey['00']
+		oneOffOchrePleaseDoNotUse: ochre['05']
   };
 		
 	return {
