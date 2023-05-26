@@ -23,7 +23,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "deploy-storybook": "storybook-to-aws-s3 --bucket-path trainual-storybook-saguaro --aws-profile NONE",
+    "deploy-storybook": "storybook-to-aws-s3 --bucket-path trainual-saguaro --aws-profile NONE",
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
   },
   "dependencies": {
