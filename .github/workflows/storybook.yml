@@ -1,0 +1,33 @@
+# Workflow name
+name: 'Publish Storybook to S3'
+
+# Event for the workflow
+on:
+  push:
+    branches:
+      - main
+
+# List of jobs
+jobs:
+  s3-deployment:
+    # Operating System
+    runs-on: ubuntu-latest
+    # Job steps
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.20.0
+      - name: Install dependencies
+        run: yarn
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: Deploy storybook to s3
+        run: storybook-to-aws-s3 --bucket-path trainual-storybook-saguaro --aws-profile NONE
+        env:
+          NODE_OPTIONS: --max-old-space-size=7680
