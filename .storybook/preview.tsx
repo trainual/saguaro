@@ -76,7 +76,7 @@ const preview: Preview = {
           "sb-show-main"
         )[0] as HTMLElement;
         if (sbRoot) {
-          sbRoot.style.backgroundColor = colorTokens.foundationSurface1;
+          sbRoot.style.backgroundColor = colorTokens.foundationBase1;
         }
       }, [useDarkMode()]);
 
