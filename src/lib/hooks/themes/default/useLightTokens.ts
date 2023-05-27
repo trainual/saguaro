@@ -25,11 +25,11 @@ const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
 
 		// State
 		stateInfo: blue[20],
-		stateError: red[50],
-		stateCaution: orange[50],
-		stateFavorite: ochre[50],
-		stateSuccess: green[50],
-		stateInfoBackground: teal['05'],
+		stateError: red[20],
+		stateCaution: orange[20],
+		stateFavorite: ochre[20],
+		stateSuccess: green[20],
+		stateInfoBackground: teal['00'],
 		stateCautionBackground: orange['00'],
 		stateErrorBackground: red['00'],
 		stateSuccessBackground: green['00'],
@@ -64,7 +64,7 @@ const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
 		// Border
 		borderSurface1: neutral[10],
 		borderSurface2: neutral[15],
-		borderSurface3: neutral[30],
+		borderSurface3: brand[30],
 		borderDefault: neutral[40],
 		borderHover: neutral[60],
 		borderDisabled: neutral[25],
