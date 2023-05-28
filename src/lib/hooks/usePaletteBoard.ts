@@ -7,12 +7,12 @@ import PaletteOption from "../types/PaletteOption";
 import PaletteBoard from "../types/PaletteBoard";
 
 const usePaletteBoard = (mode: StyleMode, brandOption: PaletteOption | string): PaletteBoard => {
-  const board = mode == 'light' ? PaletteBoardLight : PaletteBoardDark;
-	const brand = useBrandPalette(board, brandOption);
+  const board = mode === 'light' ? PaletteBoardLight : PaletteBoardDark;
+  const { brand, isCustomHex } = useBrandPalette(board, brandOption);
 
   return {
     ...board,
-    brand
+    brand: mode === 'dark' && isCustomHex ? board.teal : brand
   }
 }
 

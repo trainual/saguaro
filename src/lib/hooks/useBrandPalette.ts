@@ -23,12 +23,18 @@ function autoPalette(color: string) {
 
 const useBrandPalette = (board: CorePaletteBoard, brandOption: PaletteOption | string) => {
   if (isPalette(brandOption)) {
-    return board[brandOption];
+    return {
+      brand: board[brandOption],
+      isCustomHex: false
+    };
   }
 
   ensureHex(brandOption);
   
-  return autoPalette(brandOption);
+  return { 
+    brand: autoPalette(brandOption),
+    isCustomHex: true
+  };
 }
 
 export default useBrandPalette;
