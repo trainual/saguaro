@@ -25,7 +25,7 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
 		trainualBrand1: violet[50],
 
 		// State
-		stateInfo: blue[50],
+		stateInfo: blue[40],
 		stateError: red[50],
 		stateCaution: orange[50],
 		stateFavorite: ochre[50],

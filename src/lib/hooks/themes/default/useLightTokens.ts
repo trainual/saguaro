@@ -87,7 +87,7 @@ const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
 		accentPrimaryDefault: brand[30],
 		accentPrimaryHover: brand[50],
 		accentPrimaryPressed: brand[60],
-		accentPrimaryDisabled: brand[15],
+		accentPrimaryDisabled: neutral[15],
 
 		// Accent Secondary
 		accentSecondaryHover: brand['00'],
