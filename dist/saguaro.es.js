@@ -1173,7 +1173,7 @@ const ka = (a, e) => ta(e) ? a[e] : (aa(e), _a(e)), rr = (a, e) => {
     // Trainual Brand
     trainualBrand1: x[50],
     // State
-    stateInfo: n[50],
+    stateInfo: n[40],
     stateError: f[50],
     stateCaution: c[50],
     stateFavorite: d[50],
@@ -1446,7 +1446,7 @@ const ka = (a, e) => ta(e) ? a[e] : (aa(e), _a(e)), rr = (a, e) => {
     accentPrimaryDefault: e[30],
     accentPrimaryHover: e[50],
     accentPrimaryPressed: e[60],
-    accentPrimaryDisabled: e[15],
+    accentPrimaryDisabled: t[15],
     // Accent Secondary
     accentSecondaryHover: e["00"],
     accentSecondaryPressed: e["05"],
