@@ -161,7 +161,10 @@
 	progressColorFair: string,
 	progressColorGood: string,
 	focusOutlineColor: string,
+	anIcecreamShopClosesEverytimeYouUseThisColor: string,
 	oneOffOchrePleaseDoNotUse: string,
+	youWillMakeMattCryIfYouUseThis: string,
+	theOneOffPlanToggleThatShouldNotBeUsed: string
 }
 
 export default ColorTokens;
