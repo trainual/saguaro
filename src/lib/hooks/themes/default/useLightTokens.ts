@@ -218,7 +218,10 @@ const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
     focusOutlineColor: "#99C8FF",
 
 		// To Deprecate
-		oneOffOchrePleaseDoNotUse: ochre['05']
+		anIcecreamShopClosesEverytimeYouUseThisColor: ochre['00'],
+		oneOffOchrePleaseDoNotUse: ochre['05'],
+		youWillMakeMattCryIfYouUseThis: ochre[15],
+		theOneOffPlanToggleThatShouldNotBeUsed: '#FDF393'
 	};
 
 	const extended = {
