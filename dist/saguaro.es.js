@@ -143,7 +143,7 @@ const Rr = () => ({
   transparent1: "rgba( 211, 64, 0, 0.05)",
   transparent2: "rgba( 211, 64, 0, 0.1)",
   transparent3: "rgba( 211, 64, 0, 0.25)"
-}, Lr = {
+}, Wr = {
   "00": "#F3E3FF",
   "05": "#EDD3FF",
   10: "#E5BDFF",
@@ -159,7 +159,7 @@ const Rr = () => ({
   transparent1: "rgba( 191, 57, 235, 0.05)",
   transparent2: "rgba( 191, 57, 235, 0.1)",
   transparent3: "rgba( 191, 57, 235, 0.25)"
-}, Wr = {
+}, Lr = {
   "00": "#FFE2E2",
   "05": "#FFD1D2",
   10: "#FFC0C2",
@@ -216,8 +216,8 @@ const Rr = () => ({
   neutral: $r,
   ochre: Hr,
   orange: Mr,
-  purple: Lr,
-  red: Wr,
+  purple: Wr,
+  red: Lr,
   teal: Yr,
   violet: Nr
 }, qr = {
@@ -462,9 +462,9 @@ function ia() {
   }
 }
 function Z(a, e, o) {
-  return ia() ? Z = Reflect.construct.bind() : Z = function(s, l, h) {
+  return ia() ? Z = Reflect.construct.bind() : Z = function(s, f, h) {
     var t = [null];
-    t.push.apply(t, l);
+    t.push.apply(t, f);
     var d = Function.bind.apply(s, t), c = new d();
     return h && q(c, h.prototype), c;
   }, Z.apply(null, arguments);
@@ -725,9 +725,9 @@ To pass a single animation please supply them in simple values, e.g. animation('
 function ca() {
   for (var a = arguments.length, e = new Array(a), o = 0; o < a; o++)
     e[o] = arguments[o];
-  var n = e[0], s = [], l;
-  for (l = 1; l < e.length; l += 1)
-    s.push(e[l]);
+  var n = e[0], s = [], f;
+  for (f = 1; f < e.length; f += 1)
+    s.push(e[f]);
   return s.forEach(function(h) {
     n = n.replace(/%[a-z]/, h);
   }), n;
@@ -739,9 +739,9 @@ var P = /* @__PURE__ */ function(a) {
     if (process.env.NODE_ENV === "production")
       n = a.call(this, "An error occurred. See https://github.com/styled-components/polished/blob/main/src/internalHelpers/errors.md#" + o + " for more information.") || this;
     else {
-      for (var s = arguments.length, l = new Array(s > 1 ? s - 1 : 0), h = 1; h < s; h++)
-        l[h - 1] = arguments[h];
-      n = a.call(this, ca.apply(void 0, [ua[o]].concat(l))) || this;
+      for (var s = arguments.length, f = new Array(s > 1 ? s - 1 : 0), h = 1; h < s; h++)
+        f[h - 1] = arguments[h];
+      n = a.call(this, ca.apply(void 0, [ua[o]].concat(f))) || this;
     }
     return na(n);
   }
@@ -756,10 +756,10 @@ function fa(a, e, o) {
 function z(a, e, o, n) {
   if (n === void 0 && (n = fa), e === 0)
     return n(o, o, o);
-  var s = (a % 360 + 360) % 360 / 60, l = (1 - Math.abs(2 * o - 1)) * e, h = l * (1 - Math.abs(s % 2 - 1)), t = 0, d = 0, c = 0;
-  s >= 0 && s < 1 ? (t = l, d = h) : s >= 1 && s < 2 ? (t = h, d = l) : s >= 2 && s < 3 ? (d = l, c = h) : s >= 3 && s < 4 ? (d = h, c = l) : s >= 4 && s < 5 ? (t = h, c = l) : s >= 5 && s < 6 && (t = l, c = h);
-  var g = o - l / 2, f = t + g, b = d + g, x = c + g;
-  return n(f, b, x);
+  var s = (a % 360 + 360) % 360 / 60, f = (1 - Math.abs(2 * o - 1)) * e, h = f * (1 - Math.abs(s % 2 - 1)), t = 0, d = 0, c = 0;
+  s >= 0 && s < 1 ? (t = f, d = h) : s >= 1 && s < 2 ? (t = h, d = f) : s >= 2 && s < 3 ? (d = f, c = h) : s >= 3 && s < 4 ? (d = h, c = f) : s >= 4 && s < 5 ? (t = h, c = f) : s >= 5 && s < 6 && (t = f, c = h);
+  var g = o - f / 2, l = t + g, b = d + g, x = c + g;
+  return n(l, b, x);
 }
 var Ye = {
   aliceblue: "f0f8ff",
@@ -959,30 +959,30 @@ function Je(a) {
       green: parseInt("" + s[2], 10),
       blue: parseInt("" + s[3], 10)
     };
-  var l = ba.exec(e.substring(0, 50));
-  if (l)
-    return {
-      red: parseInt("" + l[1], 10),
-      green: parseInt("" + l[2], 10),
-      blue: parseInt("" + l[3], 10),
-      alpha: parseFloat("" + l[4]) > 1 ? parseFloat("" + l[4]) / 100 : parseFloat("" + l[4])
-    };
-  var h = ma.exec(e);
-  if (h) {
-    var t = parseInt("" + h[1], 10), d = parseInt("" + h[2], 10) / 100, c = parseInt("" + h[3], 10) / 100, g = "rgb(" + z(t, d, c) + ")", f = ce.exec(g);
-    if (!f)
-      throw new P(4, e, g);
+  var f = ba.exec(e.substring(0, 50));
+  if (f)
     return {
       red: parseInt("" + f[1], 10),
       green: parseInt("" + f[2], 10),
-      blue: parseInt("" + f[3], 10)
+      blue: parseInt("" + f[3], 10),
+      alpha: parseFloat("" + f[4]) > 1 ? parseFloat("" + f[4]) / 100 : parseFloat("" + f[4])
+    };
+  var h = ma.exec(e);
+  if (h) {
+    var t = parseInt("" + h[1], 10), d = parseInt("" + h[2], 10) / 100, c = parseInt("" + h[3], 10) / 100, g = "rgb(" + z(t, d, c) + ")", l = ce.exec(g);
+    if (!l)
+      throw new P(4, e, g);
+    return {
+      red: parseInt("" + l[1], 10),
+      green: parseInt("" + l[2], 10),
+      blue: parseInt("" + l[3], 10)
     };
   }
   var b = va.exec(e.substring(0, 50));
   if (b) {
-    var x = parseInt("" + b[1], 10), F = parseInt("" + b[2], 10) / 100, R = parseInt("" + b[3], 10) / 100, W = "rgb(" + z(x, F, R) + ")", _ = ce.exec(W);
+    var x = parseInt("" + b[1], 10), F = parseInt("" + b[2], 10) / 100, R = parseInt("" + b[3], 10) / 100, L = "rgb(" + z(x, F, R) + ")", _ = ce.exec(L);
     if (!_)
-      throw new P(4, e, W);
+      throw new P(4, e, L);
     return {
       red: parseInt("" + _[1], 10),
       green: parseInt("" + _[2], 10),
@@ -993,8 +993,8 @@ function Je(a) {
   throw new P(5);
 }
 function Fa(a) {
-  var e = a.red / 255, o = a.green / 255, n = a.blue / 255, s = Math.max(e, o, n), l = Math.min(e, o, n), h = (s + l) / 2;
-  if (s === l)
+  var e = a.red / 255, o = a.green / 255, n = a.blue / 255, s = Math.max(e, o, n), f = Math.min(e, o, n), h = (s + f) / 2;
+  if (s === f)
     return a.alpha !== void 0 ? {
       hue: 0,
       saturation: 0,
@@ -1005,7 +1005,7 @@ function Fa(a) {
       saturation: 0,
       lightness: h
     };
-  var t, d = s - l, c = h > 0.5 ? d / (2 - s - l) : d / (s + l);
+  var t, d = s - f, c = h > 0.5 ? d / (2 - s - f) : d / (s + f);
   switch (s) {
     case e:
       t = (o - n) / d + (o < n ? 6 : 0);
@@ -1166,13 +1166,13 @@ const ka = (a, e) => ta(e) ? {
     aquamarine: o,
     blue: n,
     green: s,
-    grey: l,
+    grey: f,
     magenta: h,
     neutral: t,
     ochre: d,
     orange: c,
     purple: g,
-    red: f,
+    red: l,
     teal: b,
     violet: x
   } = rr("dark", a), F = {
@@ -1180,16 +1180,16 @@ const ka = (a, e) => ta(e) ? {
     trainualBrand1: x[50],
     // State
     stateInfo: n[40],
-    stateError: f[50],
+    stateError: l[50],
     stateCaution: c[50],
     stateFavorite: d[50],
     stateSuccess: s[50],
     stateInfoBackground: b["05"],
     stateCautionBackground: c["05"],
-    stateErrorBackground: f["00"],
+    stateErrorBackground: l["00"],
     stateSuccessBackground: s["05"],
     stateInfoHover: n[30],
-    stateErrorHover: f[30],
+    stateErrorHover: l[30],
     stateCautionHover: c[30],
     stateSuccessHover: s[30],
     // Foundation
@@ -1223,13 +1223,13 @@ const ka = (a, e) => ta(e) ? {
     //  Used in places like the palette picker.
     blueDefault: n[60],
     greenDefault: s[60],
-    greyDefault: l[60],
+    greyDefault: f[60],
     magentaDefault: h[60],
     neutralDefault: t[60],
     ocreDefault: d[60],
     orangeDefault: c[60],
     purpleDefault: g[60],
-    redDefault: f[60],
+    redDefault: l[60],
     tealDefault: b[60],
     violetDefault: x[60],
     // Accent Primary
@@ -1317,18 +1317,18 @@ const ka = (a, e) => ta(e) ? {
     chartThree70: c[70],
     chartThree80: c[80],
     chartThree90: c[90],
-    chartFour00: f["00"],
-    chartFour05: f["05"],
-    chartFour10: f[10],
-    chartFour15: f[15],
-    chartFour20: f[20],
-    chartFour30: f[30],
-    chartFour40: f[40],
-    chartFour50: f[50],
-    chartFour60: f[60],
-    chartFour70: f[70],
-    chartFour80: f[80],
-    chartFour90: f[90],
+    chartFour00: l["00"],
+    chartFour05: l["05"],
+    chartFour10: l[10],
+    chartFour15: l[15],
+    chartFour20: l[20],
+    chartFour30: l[30],
+    chartFour40: l[40],
+    chartFour50: l[50],
+    chartFour60: l[60],
+    chartFour70: l[70],
+    chartFour80: l[80],
+    chartFour90: l[90],
     // Drop Shadows
     shadowBackground1: "rgba(255, 255, 255, 0.1)",
     shadowBackground2: "rgba(255, 255, 255, 0.2)",
@@ -1373,7 +1373,8 @@ const ka = (a, e) => ta(e) ? {
     anIcecreamShopClosesEverytimeYouUseThisColor: d["00"],
     oneOffOchrePleaseDoNotUse: d["05"],
     youWillMakeMattCryIfYouUseThis: d[15],
-    theOneOffPlanToggleThatShouldNotBeUsed: "#FDF393"
+    theOneOffPlanToggleThatShouldNotBeUsed: "#FDF393",
+    thisIsAOneOffGreyAndWillMakeYouCryIfUsed: f[15]
   };
   return {
     ...F,
@@ -1385,13 +1386,13 @@ const ka = (a, e) => ta(e) ? {
     aquamarine: o,
     blue: n,
     green: s,
-    grey: l,
+    grey: f,
     magenta: h,
     neutral: t,
     ochre: d,
     orange: c,
     purple: g,
-    red: f,
+    red: l,
     teal: b,
     violet: x
   } = rr("light", a), F = {
@@ -1399,16 +1400,16 @@ const ka = (a, e) => ta(e) ? {
     trainualBrand1: x[30],
     // State
     stateInfo: n[20],
-    stateError: f[20],
+    stateError: l[20],
     stateCaution: c[20],
     stateFavorite: d[20],
     stateSuccess: s[20],
     stateInfoBackground: b["00"],
     stateCautionBackground: c["00"],
-    stateErrorBackground: f["00"],
+    stateErrorBackground: l["00"],
     stateSuccessBackground: s["00"],
     stateInfoHover: n[40],
-    stateErrorHover: f[40],
+    stateErrorHover: l[40],
     stateCautionHover: c[40],
     stateSuccessHover: s[40],
     // Foundation
@@ -1442,13 +1443,13 @@ const ka = (a, e) => ta(e) ? {
     //  Used in places like the palette picker.
     blueDefault: n[30],
     greenDefault: s[30],
-    greyDefault: l[30],
+    greyDefault: f[30],
     magentaDefault: h[30],
     neutralDefault: t[30],
     ocreDefault: d[30],
     orangeDefault: c[30],
     purpleDefault: g[30],
-    redDefault: f[30],
+    redDefault: l[30],
     tealDefault: b[30],
     violetDefault: x[30],
     // Accent Primary
@@ -1536,18 +1537,18 @@ const ka = (a, e) => ta(e) ? {
     chartThree70: c[70],
     chartThree80: c[80],
     chartThree90: c[90],
-    chartFour00: f["00"],
-    chartFour05: f["05"],
-    chartFour10: f[10],
-    chartFour15: f[15],
-    chartFour20: f[20],
-    chartFour30: f[30],
-    chartFour40: f[40],
-    chartFour50: f[50],
-    chartFour60: f[60],
-    chartFour70: f[70],
-    chartFour80: f[80],
-    chartFour90: f[90],
+    chartFour00: l["00"],
+    chartFour05: l["05"],
+    chartFour10: l[10],
+    chartFour15: l[15],
+    chartFour20: l[20],
+    chartFour30: l[30],
+    chartFour40: l[40],
+    chartFour50: l[50],
+    chartFour60: l[60],
+    chartFour70: l[70],
+    chartFour80: l[80],
+    chartFour90: l[90],
     // Drop Shadows
     shadowBackground1: "rgba(0, 0, 0, 0.1)",
     shadowBackground2: "rgba(0, 0, 0, 0.2)",
@@ -1581,7 +1582,8 @@ const ka = (a, e) => ta(e) ? {
     anIcecreamShopClosesEverytimeYouUseThisColor: d["00"],
     oneOffOchrePleaseDoNotUse: d["05"],
     youWillMakeMattCryIfYouUseThis: d[15],
-    theOneOffPlanToggleThatShouldNotBeUsed: "#FDF393"
+    theOneOffPlanToggleThatShouldNotBeUsed: "#FDF393",
+    thisIsAOneOffGreyAndWillMakeYouCryIfUsed: f[15]
   }, R = {
     trainualPurple: F.trainualBrand1,
     iconOverdue: F.stateError,
@@ -1625,7 +1627,7 @@ const ka = (a, e) => ta(e) ? {
   heightMd: "2.25rem",
   heightLg: "2.5rem"
 });
-var me = { exports: {} }, L = {};
+var me = { exports: {} }, W = {};
 /*
 object-assign
 (c) Sindre Sorhus
@@ -1637,17 +1639,17 @@ function ar() {
     return le;
   Ne = 1;
   var a = Object.getOwnPropertySymbols, e = Object.prototype.hasOwnProperty, o = Object.prototype.propertyIsEnumerable;
-  function n(l) {
-    if (l == null)
+  function n(f) {
+    if (f == null)
       throw new TypeError("Object.assign cannot be called with null or undefined");
-    return Object(l);
+    return Object(f);
   }
   function s() {
     try {
       if (!Object.assign)
         return !1;
-      var l = new String("abc");
-      if (l[5] = "de", Object.getOwnPropertyNames(l)[0] === "5")
+      var f = new String("abc");
+      if (f[5] = "de", Object.getOwnPropertyNames(f)[0] === "5")
         return !1;
       for (var h = {}, t = 0; t < 10; t++)
         h["_" + String.fromCharCode(t)] = t;
@@ -1664,11 +1666,11 @@ function ar() {
       return !1;
     }
   }
-  return le = s() ? Object.assign : function(l, h) {
-    for (var t, d = n(l), c, g = 1; g < arguments.length; g++) {
+  return le = s() ? Object.assign : function(f, h) {
+    for (var t, d = n(f), c, g = 1; g < arguments.length; g++) {
       t = Object(arguments[g]);
-      for (var f in t)
-        e.call(t, f) && (d[f] = t[f]);
+      for (var l in t)
+        e.call(t, l) && (d[l] = t[l]);
       if (a) {
         c = a(t);
         for (var b = 0; b < c.length; b++)
@@ -1687,27 +1689,27 @@ function ar() {
  * LICENSE file in the root directory of this source tree.
  */
 var qe;
-function La() {
+function Wa() {
   if (qe)
-    return L;
+    return W;
   qe = 1, ar();
   var a = Ue, e = 60103;
-  if (L.Fragment = 60107, typeof Symbol == "function" && Symbol.for) {
+  if (W.Fragment = 60107, typeof Symbol == "function" && Symbol.for) {
     var o = Symbol.for;
-    e = o("react.element"), L.Fragment = o("react.fragment");
+    e = o("react.element"), W.Fragment = o("react.fragment");
   }
-  var n = a.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, s = Object.prototype.hasOwnProperty, l = { key: !0, ref: !0, __self: !0, __source: !0 };
+  var n = a.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, s = Object.prototype.hasOwnProperty, f = { key: !0, ref: !0, __self: !0, __source: !0 };
   function h(t, d, c) {
-    var g, f = {}, b = null, x = null;
+    var g, l = {}, b = null, x = null;
     c !== void 0 && (b = "" + c), d.key !== void 0 && (b = "" + d.key), d.ref !== void 0 && (x = d.ref);
     for (g in d)
-      s.call(d, g) && !l.hasOwnProperty(g) && (f[g] = d[g]);
+      s.call(d, g) && !f.hasOwnProperty(g) && (l[g] = d[g]);
     if (t && t.defaultProps)
       for (g in d = t.defaultProps, d)
-        f[g] === void 0 && (f[g] = d[g]);
-    return { $$typeof: e, type: t, key: b, ref: x, props: f, _owner: n.current };
+        l[g] === void 0 && (l[g] = d[g]);
+    return { $$typeof: e, type: t, key: b, ref: x, props: l, _owner: n.current };
   }
-  return L.jsx = h, L.jsxs = h, L;
+  return W.jsx = h, W.jsxs = h, W;
 }
 var de = {};
 /** @license React v17.0.2
@@ -1719,15 +1721,15 @@ var de = {};
  * LICENSE file in the root directory of this source tree.
  */
 var ze;
-function Wa() {
+function La() {
   return ze || (ze = 1, function(a) {
     process.env.NODE_ENV !== "production" && function() {
       var e = Ue, o = ar(), n = 60103, s = 60106;
       a.Fragment = 60107;
-      var l = 60108, h = 60114, t = 60109, d = 60110, c = 60112, g = 60113, f = 60120, b = 60115, x = 60116, F = 60121, R = 60122, W = 60117, _ = 60129, ve = 60131;
+      var f = 60108, h = 60114, t = 60109, d = 60110, c = 60112, g = 60113, l = 60120, b = 60115, x = 60116, F = 60121, R = 60122, L = 60117, _ = 60129, ve = 60131;
       if (typeof Symbol == "function" && Symbol.for) {
         var T = Symbol.for;
-        n = T("react.element"), s = T("react.portal"), a.Fragment = T("react.fragment"), l = T("react.strict_mode"), h = T("react.profiler"), t = T("react.provider"), d = T("react.context"), c = T("react.forward_ref"), g = T("react.suspense"), f = T("react.suspense_list"), b = T("react.memo"), x = T("react.lazy"), F = T("react.block"), R = T("react.server.block"), W = T("react.fundamental"), T("react.scope"), T("react.opaque.id"), _ = T("react.debug_trace_mode"), T("react.offscreen"), ve = T("react.legacy_hidden");
+        n = T("react.element"), s = T("react.portal"), a.Fragment = T("react.fragment"), f = T("react.strict_mode"), h = T("react.profiler"), t = T("react.provider"), d = T("react.context"), c = T("react.forward_ref"), g = T("react.suspense"), l = T("react.suspense_list"), b = T("react.memo"), x = T("react.lazy"), F = T("react.block"), R = T("react.server.block"), L = T("react.fundamental"), T("react.scope"), T("react.opaque.id"), _ = T("react.debug_trace_mode"), T("react.offscreen"), ve = T("react.legacy_hidden");
       }
       var Fe = typeof Symbol == "function" && Symbol.iterator, tr = "@@iterator";
       function nr(r) {
@@ -1756,7 +1758,7 @@ function Wa() {
       }
       var sr = !1;
       function ir(r) {
-        return !!(typeof r == "string" || typeof r == "function" || r === a.Fragment || r === h || r === _ || r === l || r === g || r === f || r === ve || sr || typeof r == "object" && r !== null && (r.$$typeof === x || r.$$typeof === b || r.$$typeof === t || r.$$typeof === d || r.$$typeof === c || r.$$typeof === W || r.$$typeof === F || r[0] === R));
+        return !!(typeof r == "string" || typeof r == "function" || r === a.Fragment || r === h || r === _ || r === f || r === g || r === l || r === ve || sr || typeof r == "object" && r !== null && (r.$$typeof === x || r.$$typeof === b || r.$$typeof === t || r.$$typeof === d || r.$$typeof === c || r.$$typeof === L || r.$$typeof === F || r[0] === R));
       }
       function ur(r, i, u) {
         var p = i.displayName || i.name || "";
@@ -1779,11 +1781,11 @@ function Wa() {
             return "Portal";
           case h:
             return "Profiler";
-          case l:
+          case f:
             return "StrictMode";
           case g:
             return "Suspense";
-          case f:
+          case l:
             return "SuspenseList";
         }
         if (typeof r == "object")
@@ -1960,8 +1962,8 @@ function Wa() {
         } finally {
           ae = !1, ee.current = E, fr(), Error.prepareStackTrace = y;
         }
-        var $ = r ? r.displayName || r.name : "", We = $ ? U($) : "";
-        return typeof r == "function" && G.set(r, We), We;
+        var $ = r ? r.displayName || r.name : "", Le = $ ? U($) : "";
+        return typeof r == "function" && G.set(r, Le), Le;
       }
       function Be(r, i, u) {
         return Pe(r, !1);
@@ -1980,7 +1982,7 @@ function Wa() {
         switch (r) {
           case g:
             return U("Suspense");
-          case f:
+          case l:
             return U("SuspenseList");
         }
         if (typeof r == "object")
@@ -2244,7 +2246,7 @@ Check the top-level render call using <` + u + ">.");
           r.ref !== null && (I(r), S("Invalid attribute `ref` supplied to `React.Fragment`."), I(null));
         }
       }
-      function Le(r, i, u, p, y, E) {
+      function We(r, i, u, p, y, E) {
         {
           var v = ir(r);
           if (!v) {
@@ -2275,17 +2277,17 @@ Check the top-level render call using <` + u + ">.");
         }
       }
       function Dr(r, i, u) {
-        return Le(r, i, u, !0);
+        return We(r, i, u, !0);
       }
       function Sr(r, i, u) {
-        return Le(r, i, u, !1);
+        return We(r, i, u, !1);
       }
       var Ar = Sr, Pr = Dr;
       a.jsx = Ar, a.jsxs = Pr;
     }();
   }(de)), de;
 }
-process.env.NODE_ENV === "production" ? me.exports = La() : me.exports = Wa();
+process.env.NODE_ENV === "production" ? me.exports = Wa() : me.exports = La();
 var K = me.exports;
 const Ya = Br`
   body * {
@@ -2294,10 +2296,10 @@ const Ya = Br`
     -moz-osx-font-smoothing: grayscale;
   }
 `, za = ({ brandOption: a, mode: e, children: o }) => {
-  const n = Rr(), s = Ha(), l = Ma(), h = $a(a, e), d = { constants: {
+  const n = Rr(), s = Ha(), f = Ma(), h = $a(a, e), d = { constants: {
     ...n,
     ...s,
-    ...l
+    ...f
   }, mode: e, brand: a, vars: h };
   return /* @__PURE__ */ K.jsxs(K.Fragment, { children: [
     /* @__PURE__ */ K.jsx(Ya, {}),

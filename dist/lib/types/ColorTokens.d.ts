@@ -165,5 +165,6 @@ type ColorTokens = {
     oneOffOchrePleaseDoNotUse: string;
     youWillMakeMattCryIfYouUseThis: string;
     theOneOffPlanToggleThatShouldNotBeUsed: string;
+    thisIsAOneOffGreyAndWillMakeYouCryIfUsed: string;
 };
 export default ColorTokens;

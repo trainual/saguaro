@@ -164,7 +164,8 @@
 	anIcecreamShopClosesEverytimeYouUseThisColor: string,
 	oneOffOchrePleaseDoNotUse: string,
 	youWillMakeMattCryIfYouUseThis: string,
-	theOneOffPlanToggleThatShouldNotBeUsed: string
+	theOneOffPlanToggleThatShouldNotBeUsed: string,
+	thisIsAOneOffGreyAndWillMakeYouCryIfUsed: string
 }
 
 export default ColorTokens;

@@ -237,7 +237,8 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
 		anIcecreamShopClosesEverytimeYouUseThisColor: ochre['00'],
 		oneOffOchrePleaseDoNotUse: ochre['05'],
 		youWillMakeMattCryIfYouUseThis: ochre[15],
-		theOneOffPlanToggleThatShouldNotBeUsed: '#FDF393'
+		theOneOffPlanToggleThatShouldNotBeUsed: '#FDF393',
+		thisIsAOneOffGreyAndWillMakeYouCryIfUsed: grey[15]
   };
 		
 	return {
