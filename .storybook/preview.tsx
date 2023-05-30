@@ -6,12 +6,7 @@ import { useDarkMode } from "storybook-dark-mode";
 
 import SaguaroThemeProvider from '../src/lib/components/SaguaroThemeProvider';
 
-import { 
-  useBorderTokens,
-  useFontTokens,
-  useSpacingTokens,
-  useColorTokens,
-} from '../src/lib';
+import { useColorTokens } from '../src/lib';
 
 export const parameters = {
   darkMode: {

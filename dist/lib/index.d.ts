@@ -5,6 +5,7 @@ export type { default as SpacingTokens } from './types/SpacingTokens';
 export { default as useBorderTokens } from './hooks/useBorderTokens';
 export { default as useColorTokens } from './hooks/useColorTokens';
 export { default as useFontTokens } from './hooks/useFontTokens';
+export { default as useHeightTokens } from './hooks/useHeightTokens';
 export { default as useSpacingTokens } from './hooks/useSpacingTokens';
 export type { default as SaguaroTheme } from './types/SaguaroTheme';
 export { default as SaguaroThemeProvider } from './components/SaguaroThemeProvider';

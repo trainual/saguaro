@@ -1613,6 +1613,12 @@ const ka = (a, e) => ta(e) ? {
   fontExtrabold: "800",
   fontHeavy: "900"
 }), Ma = () => ({
+  height2xs: "1rem",
+  heightXs: "1.5rem",
+  heightSm: "2rem",
+  heightMd: "2.25rem",
+  heightLg: "2.5rem"
+}), Wa = () => ({
   spacer2xs: "0.125rem",
   spacerXs: "0.25rem",
   spacerSm: "0.5rem",
@@ -1620,12 +1626,7 @@ const ka = (a, e) => ta(e) ? {
   spacerLg: "1.5rem",
   spacerXl: "2rem",
   spacer2xl: "2.5rem",
-  spacer3xl: "3rem",
-  height2xs: "1rem",
-  heightXs: "1.5rem",
-  heightSm: "2rem",
-  heightMd: "2.25rem",
-  heightLg: "2.5rem"
+  spacer3xl: "3rem"
 });
 var me = { exports: {} }, W = {};
 /*
@@ -1689,7 +1690,7 @@ function ar() {
  * LICENSE file in the root directory of this source tree.
  */
 var qe;
-function Wa() {
+function La() {
   if (qe)
     return W;
   qe = 1, ar();
@@ -1721,7 +1722,7 @@ var de = {};
  * LICENSE file in the root directory of this source tree.
  */
 var ze;
-function La() {
+function Ya() {
   return ze || (ze = 1, function(a) {
     process.env.NODE_ENV !== "production" && function() {
       var e = Ue, o = ar(), n = 60103, s = 60106;
@@ -2287,29 +2288,31 @@ Check the top-level render call using <` + u + ">.");
     }();
   }(de)), de;
 }
-process.env.NODE_ENV === "production" ? me.exports = Wa() : me.exports = La();
+process.env.NODE_ENV === "production" ? me.exports = La() : me.exports = Ya();
 var K = me.exports;
-const Ya = Br`
+const Na = Br`
   body * {
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-`, za = ({ brandOption: a, mode: e, children: o }) => {
-  const n = Rr(), s = Ha(), f = Ma(), h = $a(a, e), d = { constants: {
+`, Ua = ({ brandOption: a, mode: e, children: o }) => {
+  const n = Rr(), s = Ha(), f = Ma(), h = Wa(), t = $a(a, e), c = { constants: {
     ...n,
     ...s,
-    ...f
-  }, mode: e, brand: a, vars: h };
+    ...f,
+    ...h
+  }, mode: e, brand: a, vars: t };
   return /* @__PURE__ */ K.jsxs(K.Fragment, { children: [
-    /* @__PURE__ */ K.jsx(Ya, {}),
-    /* @__PURE__ */ K.jsx(Or, { theme: d, children: o })
+    /* @__PURE__ */ K.jsx(Na, {}),
+    /* @__PURE__ */ K.jsx(Or, { theme: c, children: o })
   ] });
 };
 export {
-  za as SaguaroThemeProvider,
+  Ua as SaguaroThemeProvider,
   Rr as useBorderTokens,
   $a as useColorTokens,
   Ha as useFontTokens,
-  Ma as useSpacingTokens
+  Ma as useHeightTokens,
+  Wa as useSpacingTokens
 };

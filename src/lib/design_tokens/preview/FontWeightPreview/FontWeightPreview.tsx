@@ -1,6 +1,6 @@
 
 import { useTheme } from 'styled-components';
-import StyleTable, { StyleGroupBody } from '../shared/StyleTable/StyleTable';
+import StyleTable, { StyleGroupBody, StyleGroupHeader } from '../shared/StyleTable/StyleTable';
 import FontWeightRow from './_FontWeightRow';
 
 const FontWeightPreview = () => {
@@ -19,6 +19,7 @@ const FontWeightPreview = () => {
 
   return (
     <StyleTable>
+      <StyleGroupHeader title='Font Weights' />
       <StyleGroupBody>
         <FontWeightRow text='font-extralight' weight={fontExtralight} />
         <FontWeightRow text='font-light' weight={fontLight} />

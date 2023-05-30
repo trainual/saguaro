@@ -1,4 +1,4 @@
-type FontTokens = {
+type SpacingTokens = {
     spacer2xs: string;
     spacerXs: string;
     spacerSm: string;
@@ -7,10 +7,5 @@ type FontTokens = {
     spacerXl: string;
     spacer2xl: string;
     spacer3xl: string;
-    height2xs: string;
-    heightXs: string;
-    heightSm: string;
-    heightMd: string;
-    heightLg: string;
 };
-export default FontTokens;
+export default SpacingTokens;

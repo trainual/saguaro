@@ -7,6 +7,7 @@ import {
 import StyleMode from '../types/StyleMode';
 import useColorTokens from '../hooks/useColorTokens';
 import useBorderTokens from '../hooks/useBorderTokens';
+import useHeightTokens from '../hooks/useHeightTokens';
 import useSpacingTokens from '../hooks/useSpacingTokens';
 import useFontTokens from '../hooks/useFontTokens';
 import PaletteOption from '../types/PaletteOption';
@@ -29,11 +30,13 @@ type Props = {
 const SaguaroThemeProvider = ({ brandOption, mode, children }: Props) => {
   const borderTokens = useBorderTokens();
   const fontTokens = useFontTokens();
+  const heightTokens = useHeightTokens();
   const spacingTokens = useSpacingTokens();
   const colorTokens = useColorTokens(brandOption, mode);
   const constants = {
     ...borderTokens,
     ...fontTokens,
+    ...heightTokens,
     ...spacingTokens,
   };
 

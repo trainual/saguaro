@@ -3,7 +3,8 @@ import BorderTokens from './BorderTokens';
 import FontTokens from './FontTokens';
 import SpacingTokens from './SpacingTokens';
 import StyleMode from './StyleMode';
-type ConstantTokens = BorderTokens & FontTokens & SpacingTokens;
+import HeightTokens from './HeightTokens';
+type ConstantTokens = BorderTokens & FontTokens & SpacingTokens & HeightTokens;
 interface SaguaroTheme {
     constants: ConstantTokens;
     mode: StyleMode;
