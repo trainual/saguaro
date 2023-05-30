@@ -1,7 +1,7 @@
 import styled, { useTheme } from 'styled-components';
 
-import BorderRow from '../BorderRow/BorderRow';
-import StyleTable, { StyleGroupBody, StyleGroupHeader } from '../StyleTable/StyleTable';
+import BorderRow from './_BorderRow';
+import StyleTable, { StyleGroupBody, StyleGroupHeader } from '../shared/StyleTable/StyleTable';
 
 const SpacedTable = styled(StyleTable)`
   border-spacing: 20px;

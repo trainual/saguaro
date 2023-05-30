@@ -1,7 +1,7 @@
 
 import { useTheme } from 'styled-components';
-import ColorRow from '../ColorRow/ColorRow';
-import StyleTable, { StyleGroupBody, StyleGroupHeader } from '../StyleTable/StyleTable';
+import ColorRow from '../shared/ColorRow/ColorRow';
+import StyleTable, { StyleGroupBody, StyleGroupHeader } from '../shared/StyleTable/StyleTable';
 import usePaletteBoard from '../../../hooks/usePaletteBoard';
 
 const PalettePreview = () => {

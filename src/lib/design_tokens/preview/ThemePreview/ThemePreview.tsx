@@ -1,9 +1,9 @@
 import { useTheme } from "styled-components";
-import ColorRow from "../ColorRow/ColorRow";
+import ColorRow from "../shared/ColorRow/ColorRow";
 import StyleTable, {
   StyleGroupBody,
   StyleGroupHeader,
-} from "../StyleTable/StyleTable";
+} from "../shared/StyleTable/StyleTable";
 
 const ThemePreview = () => {
   const { vars } = useTheme();
