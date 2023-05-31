@@ -13,8 +13,9 @@ const ColorBar = styled.td<{ color: string }>`
 const ColorRow = ({ hex, text }: { hex: string; text: string }) => {
   return (
     <tr>
-      <ColorText color={hex}>{text} </ColorText>
+      <ColorText color={hex}>{text}</ColorText>
       <ColorBar color={hex} />
+      <ColorText color={hex}>{hex}</ColorText>
     </tr>
   );
 };

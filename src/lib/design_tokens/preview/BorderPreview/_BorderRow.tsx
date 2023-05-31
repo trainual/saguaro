@@ -34,7 +34,8 @@ const BorderRow = ({ radius, text }: Props) => {
 
   return (
     <tr>
-      <BorderText>{text} </BorderText>
+      <BorderText>{text}</BorderText>
+      <BorderText>{radius}</BorderText>
       <BorderCell radius={radius} width={borderWidthXs} />
       <BorderCell radius={radius} width={borderWidthSm} />
       <BorderCell radius={radius} width={borderWidthMd} />
