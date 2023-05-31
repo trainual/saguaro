@@ -20,13 +20,17 @@ const SpacingCenter = styled.span<{ width: string }>`
   width: ${({ width }) => width};
 `;
 
+const StyledCell = styled.td`
+  padding: 0 3rem;
+`
+
 const SpacingCell = ({ spacing }: { spacing: string }) => {
   return (
-    <td>
+    <StyledCell>
       <SpacingLeft>{'>'}</SpacingLeft>
       <SpacingCenter width={spacing} />
       <SpacingRight>{'<'}</SpacingRight>
-    </td>
+    </StyledCell>
   );
 }
 
@@ -40,6 +44,7 @@ const SpacingRow = ({ text, spacing }: Props) => {
     <tr>
       <SpacingText>{text}</SpacingText>
       <SpacingCell spacing={spacing} />
+      <SpacingText>{spacing}</SpacingText>
     </tr>
   );
 };

@@ -15,9 +15,20 @@ const BorderHeaderCell = styled.th`
 `;
 
 const BorderHeader = () => {
+  const { 
+    constants: {
+      borderWidthXs,
+      borderWidthSm,
+      borderWidthMd,
+      borderWidthLg,
+      borderWidthXl,
+      borderWidth2xl,
+    }
+  } = useTheme();
   return (
     <thead>
       <tr>
+        <th />
         <th />
         <BorderHeaderCell>border-width-xs</BorderHeaderCell>
         <BorderHeaderCell>border-width-sm</BorderHeaderCell>
@@ -25,6 +36,16 @@ const BorderHeader = () => {
         <BorderHeaderCell>border-width-lg</BorderHeaderCell>
         <BorderHeaderCell>border-width-xl</BorderHeaderCell>
         <BorderHeaderCell>border-width-2xl</BorderHeaderCell>
+      </tr>
+      <tr>
+        <th />
+        <th />
+        <BorderHeaderCell>{borderWidthXs}</BorderHeaderCell>
+        <BorderHeaderCell>{borderWidthSm}</BorderHeaderCell>
+        <BorderHeaderCell>{borderWidthMd}</BorderHeaderCell>
+        <BorderHeaderCell>{borderWidthLg}</BorderHeaderCell>
+        <BorderHeaderCell>{borderWidthXl}</BorderHeaderCell>
+        <BorderHeaderCell>{borderWidth2xl}</BorderHeaderCell>
       </tr>
     </thead>
   );

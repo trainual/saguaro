@@ -1,40 +1,35 @@
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
-import HeightRow from './_HeightRow';
 import StyleTable, { StyleGroupBody, StyleGroupHeader } from '../shared/StyleTable/StyleTable';
+import HeightCell from './_HeightCell';
 
 const SpacedTable = styled(StyleTable)`
   border-spacing: 20px;
   border-collapse: separate;
 `;
 
-const HeightHeaderCell = styled.th`
-  color: ${({ theme: { vars } }) => vars.textDefault};
-  font-size: 0.9rem;
-  font-weight: normal;
-`;
-
-const HeightHeader = () => {
-  return (
-    <thead>
-      <tr>
-        <HeightHeaderCell>height-2xs</HeightHeaderCell>
-        <HeightHeaderCell>height-xs</HeightHeaderCell>
-        <HeightHeaderCell>height-sm</HeightHeaderCell>
-        <HeightHeaderCell>height-md</HeightHeaderCell>
-        <HeightHeaderCell>height-lg</HeightHeaderCell>
-      </tr>
-    </thead>
-  );
-};
-
 const HeightPreview = () => {
+  const {
+    constants: {
+      height2xs,
+      heightXs,
+      heightSm,
+      heightMd,
+      heightLg
+    }
+  } = useTheme();
+
   return (
     <SpacedTable>
       <StyleGroupHeader title='Heights' />
-      <HeightHeader />
       <StyleGroupBody>
-        <HeightRow />
+        <tr>
+          <HeightCell text='height-2xs' height={height2xs} />
+          <HeightCell text='height-xs' height={heightXs} />
+          <HeightCell text='height-sm' height={heightSm} />
+          <HeightCell text='height-md' height={heightMd} />
+          <HeightCell text='height-lg' height={heightLg} />
+        </tr>
       </StyleGroupBody>
     </SpacedTable>
   );
