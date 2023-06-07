@@ -230,6 +230,7 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
     badgeCaution: core.stateCaution,
     badgeSuccess: core.stateSuccess,
     badgeInfo: core.stateInfo,
+		badgeFlare: "#CEFFF0",
 
     logoBkgColor: core.foundationSurface1,
 

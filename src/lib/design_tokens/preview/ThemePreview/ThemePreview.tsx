@@ -197,6 +197,7 @@ const ThemePreview = () => {
         <ColorRow hex={vars.badgeSuccess} text="badge-success" />
         <ColorRow hex={vars.badgeInfo} text="badge-info" />
         <ColorRow hex={vars.badgeGeneral} text="badge-general" />
+        <ColorRow hex={vars.badgeFlare} text="badge-flare" />
       </StyleGroupBody>
 
       <StyleGroupHeader title="Charts & Graphs" />
