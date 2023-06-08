@@ -1368,6 +1368,7 @@ const ka = (a, e) => ta(e) ? {
     badgeCaution: F.stateCaution,
     badgeSuccess: F.stateSuccess,
     badgeInfo: F.stateInfo,
+    badgeFlare: "#CEFFF0",
     logoBkgColor: F.foundationSurface1,
     // To Deprecate
     anIcecreamShopClosesEverytimeYouUseThisColor: d["00"],
@@ -1594,6 +1595,7 @@ const ka = (a, e) => ta(e) ? {
     badgeCaution: F.stateCaution,
     badgeSuccess: F.stateSuccess,
     badgeInfo: F.stateInfo,
+    badgeFlare: "#CEFFF0",
     logoBkgColor: F.foundationSurface1
   };
   return {

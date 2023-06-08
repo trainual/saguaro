@@ -80,6 +80,7 @@ type ColorTokens = {
     badgeSuccess: string;
     badgeInfo: string;
     badgeGeneral: string;
+    badgeFlare: string;
     scalePlanText: string;
     scalePlanNontext: string;
     ctaSecondary: string;
