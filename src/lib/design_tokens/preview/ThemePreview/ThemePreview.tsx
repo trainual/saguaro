@@ -40,7 +40,7 @@ const ThemePreview = () => {
           text="state-success-background"
         />
         <ColorRow hex={vars.stateSuccessHover} text="state-success-hover" />
-        <ColorRow hex={vars.stateFavorite} text="state-info" />
+        <ColorRow hex={vars.stateFavorite} text="state-favorite" />
       </StyleGroupBody>
 
       <StyleGroupHeader
