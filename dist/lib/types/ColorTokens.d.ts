@@ -92,5 +92,10 @@ type ColorTokens = {
     shadowSpecialWysiwyg: string;
     shadowSpecialDataTable: string;
     focusOutlineColor: string;
+    anIcecreamShopClosesEverytimeYouUseThisColor: string;
+    oneOffOchrePleaseDoNotUse: string;
+    youWillMakeMattCryIfYouUseThis: string;
+    theOneOffPlanToggleThatShouldNotBeUsed: string;
+    thisIsAOneOffGreyAndWillMakeYouCryIfUsed: string;
 };
 export default ColorTokens;

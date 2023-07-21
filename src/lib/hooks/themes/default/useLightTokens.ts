@@ -140,6 +140,7 @@ const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
     // A11y
     focusOutlineColor: "#99C8FF",
 
+		// Deprecated
     anIcecreamShopClosesEverytimeYouUseThisColor: "#FFF6DD",
     oneOffOchrePleaseDoNotUse: "#FFF1C6",
     youWillMakeMattCryIfYouUseThis: "#FFD24B",
