@@ -1,18 +1,14 @@
 import Palette, { ExpandedPalette } from "./Palette";
 
 export type CorePaletteBoard = {
-  aquamarine: Palette,
   blue: Palette,
   green: Palette,
-  grey: Palette,
   magenta: Palette,
   neutral: ExpandedPalette,
-  ochre: Palette,
-  orange: Palette,
   purple: Palette,
   red: Palette,
-  teal: Palette,
-  violet: Palette,
+  yellow: Palette,
+  orange: Palette,
 };
 
 type PaletteBoard = CorePaletteBoard & {

@@ -12,7 +12,7 @@ const usePaletteBoard = (mode: StyleMode, brandOption: PaletteOption | string): 
 
   return {
     ...board,
-    brand: mode === 'dark' && isCustomHex ? board.teal : brand
+    brand: mode === 'dark' && isCustomHex ? board.purple : brand
   }
 }
 
