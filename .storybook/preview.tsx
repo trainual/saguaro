@@ -22,10 +22,17 @@ export const globalTypes = {
   brand: {
     name: "Brand",
     description: "Set the brand color",
-    defaultValue: "#6A28EA",
+    defaultValue: "purple",
     toolbar: {
       icon: "paintbrush",
       items: [
+        { title: "Palette | Purple", value: "purple" },
+        { title: "Palette | Blue", value: "blue" },
+        { title: "Palette | Magenta", value: "magenta" },
+        { title: "Palette | Red", value: "red" },
+        { title: "Palette | Yellow", value: "yellow" },
+        { title: "Palette | Orange", value: "orange" },
+        { title: "Palette | Green", value: "green" },
         { title: "Custom | #6A28EA (Trainual Purple)", value: "#6A28EA" },
         { title: "Custom | #482D8C (Old Trainual Purple)", value: "#482D8C" },
         {
@@ -40,29 +47,6 @@ export const globalTypes = {
         { title: "Custom | #F8BD1C (yellow)", value: "#F8BD1C" },
         { title: "Custom | #FA9522 (orange)", value: "#FA9522" },
         { title: "Custom | #000000 (black)", value: "#000000" },
-        { title: 'Custom (Recommended) | #006911 (dark green)', value: '#006911' },
-        { title: 'Custom (Recommended) | #6a8000 (light green)', value: '#6a8000' },
-        { title: 'Custom (Recommended) | #005f65 (dark bluegreen)', value: '#005f65' },
-        { title: 'Custom (Recommended) | #358270 (light bluegreen)', value: '#358270' },
-        { title: 'Custom (Recommended) | #0f4dc5 (dark blue)', value: '#0f4dc5' },
-        { title: 'Custom (Recommended) | #116fe8 (light blue)', value: '#116fe8' },
-        { title: 'Custom (Recommended) | #3e02b1 (dark purple)', value: '#3e02b1' },
-        { title: 'Custom (Recommended) | #6a28ea (light purple)', value: '#6a28ea' },
-        { title: 'Custom (Recommended) | #95076d (dark pink)', value: '#95076d' },
-        { title: 'Custom (Recommended) | #df077a (light pink)', value: '#df077a' },
-        { title: 'Custom (Recommended) | #ab011f (dark orange)', value: '#ab011f' },
-        { title: 'Custom (Recommended) | #e02d00 (light orange)', value: '#e02d00' },
-        { title: "Palette | Blue", value: "blue" },
-        { title: "Palette | Green", value: "green" },
-        { title: "Palette | Grey", value: "grey" },
-        { title: "Palette | Magenta", value: "magenta" },
-        { title: "Palette | Neutral", value: "neutral" },
-        { title: "Palette | Ocre", value: "ocre" },
-        { title: "Palette | Orange", value: "orange" },
-        { title: "Palette | Purple", value: "purple" },
-        { title: "Palette | Red", value: "red" },
-        { title: "Palette | Teal", value: "teal" },
-        { title: "Palette | Violet", value: "violet" },
       ],
       showName: false,
     },
@@ -76,7 +60,7 @@ const preview: Preview = {
         context.parameters.mode === "dark" ? "dark" : null;
       const storybookTheme = useDarkMode() ? "dark" : "light";
       const mode = componentStoryTheme || storybookTheme;
-      const colorTokens = useColorTokens('violet', mode);
+      const colorTokens = useColorTokens('purple', mode);
 
       useEffect(() => {
         const sbRoot = document.getElementsByClassName(

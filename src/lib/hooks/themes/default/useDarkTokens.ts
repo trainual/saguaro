@@ -6,179 +6,108 @@ import usePaletteBoard from '../../usePaletteBoard';
 const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
 	const {
 		brand,
-		aquamarine,
 		blue,
 		green,
-		grey,
 		magenta,
 		neutral,
-		ochre,
 		orange,
 		purple,
 		red,
-		teal,
-		violet,
+		yellow,
 	} = usePaletteBoard('dark', brandOption);
 
-	const core = {
-		// Trainual Brand
-		trainualBrand1: violet[50],
-
-		// State
-		stateInfo: blue[40],
-		stateError: red[50],
-		stateCaution: orange[50],
-		stateFavorite: ochre[50],
-		stateSuccess: green[50],
-		stateInfoBackground: teal['05'],
-		stateCautionBackground: orange['05'],
-		stateErrorBackground: red['00'],
-		stateSuccessBackground: green['05'],
-		stateInfoHover: blue[30],
-		stateErrorHover: red[30],
-		stateCautionHover: orange[30],
-		stateSuccessHover: green[30],
-
+	return {
 		// Foundation
-		foundationBase1: neutral[15],
-		foundationBase2: neutral[30],
-		foundationSurface1: neutral[20],
+		foundationHover: neutral[10],
+		foundationBase1: neutral['05'],
+		foundationBase2: neutral[10],
+		foundationBase3: neutral[15],
+		foundationBase4: neutral[30],
+		foundationSurface1: neutral['00'],
 		foundationSurface2: neutral[90],
-		foundationSurface3: brand[30],
-		foundationSurface4: ochre[10],
-		foundationHover: neutral[15],
-
-		// Icon
-		icon1: neutral[80],
-		icon2: neutral[90],
-		iconSurface: neutral['00'],
-
-		// Text
-		textPlaceholder: neutral[40],
-		textDefault: neutral[70],
-		textSubdued: neutral[50],
-		textSurface: neutral[20],
-		textActiveVibrant: teal[40],
-		textHoverVibrant: teal[50],
-		textDisabled: neutral[50],
 
 		// Border
-		borderSurface1: neutral[25],
-		borderSurface2: neutral[30],
-		borderSurface3: brand[40],
-		borderDefault: neutral[40],
-		borderHover: neutral[60],
-		borderDisabled: neutral[40],
+		borderSurface1: neutral['05'],
+		borderSurface2: neutral[10],
+		borderDefault: neutral[50],
+		borderHover: neutral[70],
+		borderDisabled: neutral[30],
+
+		// Text
+		textDefault: neutral[80],
+		textSubdued: neutral[50],
+		textPlaceholder: neutral[40],
+		textSurface: neutral['00'],
+		textHover: neutral[90],
+		textDisabled: neutral[30],
+
+		// Accent
+		accentPrimaryDefault: brand[50],
+		accentPrimaryHover: brand[60],
+		accentPrimaryPressed: brand[70],
+		accentPrimaryDisabled: brand['00'],
+		accentSubdued1: brand['00'],
+		accentSubdued2: brand['05'],
+		accentSubdued3: brand[10],
+		accentSubdued4: brand[20],
+		accentStrong1: brand[80],
+		accentStrong2: brand[90],
+
+		// State
+		stateInfo: blue[50],
+		stateError: red[50],
+		stateCaution: orange[50],
+		stateFavorite: yellow[50],
+		stateSuccess: green[50],
+
+		stateBadgeTrainual: purple['00'],
+		stateBadgeInfo: blue['05'],
+		stateBadgeError: red['05'],
+		stateBadgeCaution: orange['05'],
+		stateBadgeSuccess: green['05'],
+		stateBadgeGeneral: neutral['05'],
+
+		stateBackgroundInfo: blue['00'],
+		stateBackgroundError: red['00'],
+		stateBackgroundCaution: orange['00'],
+		stateBackgroundSuccess: green['00'],
+
+		stateHoverInfo: blue[70],
+		stateHoverError: red[70],
+		stateHoverCaution: orange[70],
+		stateHoverSuccess: green[70],
+
+		stateCompletionLow: orange[40],
+		stateCompletionMedium: yellow[50],
+		stateCompletionHigh: green[30],
+		stateCompletionFull: green[60],
+
+		// Chart
+		chartBlue1: blue[60],
+		chartGreen1: green['00'],
+		chartGreen2: green[30],
+		chartOrange1: orange[60],
+		chartRed1: red['00'],
+		chartRed2: red['05'],
+		chartRed3: red[50],
+
+		// Brand
+		trainualBrandGreen: green[40],
+		trainualBrandYellow: yellow[10],
+		trainualBrandMagenta: magenta[40],
+		trainualBrandPurple: purple[50],
+		trainualBrandBlue: blue[90],
 
 		// The representative for each palette. 
 		//  Used in places like the palette picker.
-		blueDefault: blue[60],
-		greenDefault: green[60],
-		greyDefault: grey[60],
-		magentaDefault: magenta[60],
-		neutralDefault: neutral[60],
-		ocreDefault: ochre[60],
-		orangeDefault: orange[60],
-		purpleDefault: purple[60],
-		redDefault: red[60],
-		tealDefault: teal[60],
-		violetDefault: violet[60],
-
-		// Accent Primary
-		accentPrimaryDefault: brand[30],
-		accentPrimaryHover: brand[50],
-		accentPrimaryPressed: brand[60],
-		accentPrimaryDisabled: neutral[30],
-
-		// Accent Secondary
-		accentSecondaryHover: brand['00'],
-		accentSecondaryPressed: brand['05'],
-		accentSecondaryDisabled: neutral[50],
-
-		// Accent Border
-		accentBorderDefault: brand[30],
-		accentBorderHover: brand[60],
-		accentBorderDisabled: neutral[40],
-
-		// Accent Text
-		accentTextPlaceholder: brand[10],
-		accentTextDefault: brand[50],
-		accentTextHover: brand[60],
-		accentTextActive: brand[70],
-		accentTextPressed: brand[70],
-		accentTextDisabled: neutral[25],
-
-		// Accent Toggle
-		accentToggleOff: neutral[25], // toggle switch
-		accentToggleOn: brand[70], // toggle switch
-		accentToggleDefault: brand[15], // toggle switch bg
-		accentToggleHover: brand[20], // toggle switch bg
-		accentToggleActive: brand[50], // toggle switch bg
-		accentToggleActiveHover: brand[40], // toggle switch
-		accentToggleDisabled: neutral[50], // toggle switch bg
-
-		// Badge
-		//  TODO: Overly specific. Add foundationBase3 instead.
-		badgeGeneral: neutral[60],
-
-		// Billing Page
-		//  TODO: Overly specific. Refactor to use trainualBrand1, 2, 3, etc
-		scalePlanText: aquamarine[60],
-		scalePlanNontext: aquamarine[50],
-		ctaSecondary: aquamarine[50],
-		ctaPrimary: blue[90],
-		trainPlanText: violet[30],	//Replace with trainualBrand1
-		trainPlanNontext: violet[30],  //Replace with trainualBrand1
-
-		// Charts & Graphs
-		chartOne00: blue['00'],
-		chartOne05: blue['05'],
-		chartOne10: blue[10],
-		chartOne15: blue[15],
-		chartOne20: blue[20],
-		chartOne30: blue[30],
-		chartOne40: blue[40],
-		chartOne50: blue[50],
-		chartOne60: blue[60],
-		chartOne70: blue[70],
-		chartOne80: blue[80],
-		chartOne90: blue[90],
-		chartTwo00: green['00'],
-		chartTwo05: green['05'],
-		chartTwo10: green[10],
-		chartTwo15: green[15],
-		chartTwo20: green[20],
-		chartTwo30: green[30],
-		chartTwo40: green[40],
-		chartTwo50: green[50],
-		chartTwo60: green[60],
-		chartTwo70: green[70],
-		chartTwo80: green[80],
-		chartTwo90: green[90],
-		chartThree00: orange['00'],
-		chartThree05: orange['05'],
-		chartThree10: orange[10],
-		chartThree15: orange[15],
-		chartThree20: orange[20],
-		chartThree30: orange[30],
-		chartThree40: orange[40],
-		chartThree50: orange[50],
-		chartThree60: orange[60],
-		chartThree70: orange[70],
-		chartThree80: orange[80],
-		chartThree90: orange[90],
-		chartFour00: red['00'],
-		chartFour05: red['05'],
-		chartFour10: red[10],
-		chartFour15: red[15],
-		chartFour20: red[20],
-		chartFour30: red[30],
-		chartFour40: red[40],
-		chartFour50: red[50],
-		chartFour60: red[60],
-		chartFour70: red[70],
-		chartFour80: red[80],
-		chartFour90: red[90],
+		blueDefault: blue[50],
+		greenDefault: green[50],
+		magentaDefault: magenta[50],
+		neutralDefault: neutral[50],
+		orangeDefault: orange[50],
+		purpleDefault: purple[50],
+		redDefault: red[50],
+		yellowDefault: yellow[50],
 		
 		// Drop Shadows
 		shadowBackground1: 'rgba(255, 255, 255, 0.1)',
@@ -209,42 +138,8 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
 		shadowSpecialWysiwyg: `0 2px 4px ${neutral.transparent3}`,
 		shadowSpecialDataTable: `0 5px 10px ${neutral.transparent3}`,
 
-    // Progress Colors
-    progressColorBad: "#EB5757",
-    progressColorAcceptable: "#F9AE58",
-    progressColorFair: "#B4CC52",
-    progressColorGood: "#75C181",
-
     // A11y
     focusOutlineColor: "#99C8FF",
-	};
-
-	const extended = {
-		trainualPurple: core.trainualBrand1,
-    iconOverdue: core.stateError,
-    iconActive: core.stateSuccess,
-    borderActive: core.stateInfo,
-    accentSecondaryDefault: core.foundationSurface1,
-
-    badgeError: core.stateError,
-    badgeCaution: core.stateCaution,
-    badgeSuccess: core.stateSuccess,
-    badgeInfo: core.stateInfo,
-		badgeFlare: "#CEFFF0",
-
-    logoBkgColor: core.foundationSurface1,
-
-		// To Deprecate
-		anIcecreamShopClosesEverytimeYouUseThisColor: ochre['00'],
-		oneOffOchrePleaseDoNotUse: ochre['05'],
-		youWillMakeMattCryIfYouUseThis: ochre[15],
-		theOneOffPlanToggleThatShouldNotBeUsed: '#FDF393',
-		thisIsAOneOffGreyAndWillMakeYouCryIfUsed: grey[15]
-  };
-		
-	return {
-		...core,
-		...extended
 	} as ColorTokens;
 }
 

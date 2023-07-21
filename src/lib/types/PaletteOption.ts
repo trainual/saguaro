@@ -1,15 +1,11 @@
 type PaletteOption = 
-	'aquamarine'
-	| 'blue' 
+	'blue' 
 	| 'green' 
-	| 'grey'
 	| 'magenta'
 	| 'neutral'
-	| 'ochre'
 	| 'orange'
 	| 'purple'
 	| 'red'
-	| 'teal'
-	| 'violet'
+	| 'yellow'
 
 export default PaletteOption;
