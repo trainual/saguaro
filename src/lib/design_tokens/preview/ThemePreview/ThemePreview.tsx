@@ -254,6 +254,21 @@ const ThemePreview = () => {
         <ColorRow hex={vars.chartFour80} text="chart-four-80" />
         <ColorRow hex={vars.chartFour90} text="chart-four-90" />
       </StyleGroupBody>
+
+      <StyleGroupHeader title="Defaults" />
+      <StyleGroupBody>
+        <ColorRow hex={vars.blueDefault} text="blue-default" />
+        <ColorRow hex={vars.greenDefault} text="green-default" />
+        <ColorRow hex={vars.greyDefault} text="grey-default" />
+        <ColorRow hex={vars.magentaDefault} text="magenta-default" />
+        <ColorRow hex={vars.neutralDefault} text="neutral-default" />
+        <ColorRow hex={vars.ocreDefault} text="ocre-default" />
+        <ColorRow hex={vars.orangeDefault} text="orange-default" />
+        <ColorRow hex={vars.purpleDefault} text="purple-default" />
+        <ColorRow hex={vars.redDefault} text="red-default" />
+        <ColorRow hex={vars.tealDefault} text="teal-default" />
+        <ColorRow hex={vars.violetDefault} text="violet-default" />
+      </StyleGroupBody>
     </StyleTable>
   );
 };

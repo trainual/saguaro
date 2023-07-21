@@ -5,7 +5,7 @@ import green from "../palettes/green/light";
 import grey from "../palettes/grey/light";
 import magenta from "../palettes/magenta/light";
 import neutral from "../palettes/neutral/light";
-import ochre from "../palettes/ochre/light";
+import ochre from "../palettes/yellow/light";
 import orange from "../palettes/orange/light";
 import purple from "../palettes/purple/light";
 import red from "../palettes/red/light";
