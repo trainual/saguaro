@@ -16,7 +16,7 @@ const ColorRow = ({ hex, text }: { hex: string; text: string }) => {
     <tr>
       <ColorText color={hex}>{text}</ColorText>
       <ColorBar color={hex} />
-      {/* <ColorText color={hex}>{hex}</ColorText> */}
+      <ColorText color={hex}>{hex}</ColorText>
     </tr>
   );
 };
