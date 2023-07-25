@@ -6,18 +6,17 @@ import { CorePaletteBoard } from "../types/PaletteBoard";
 
 function autoPalette(color: string) {
   return {
-    "00": lighten(0.36, color),
-    "05": lighten(0.32, color),
-    "10": lighten(0.27, color),
-    "15": lighten(0.14, color),
-    "20": lighten(0.1, color),
-    "30": lighten(0.0, color),
-    "40": darken(0.07, color),
-    "50": darken(0.14, color),
-    "60": darken(0.2, color),
-    "70": darken(0.25, color),
-    "80": darken(0.31, color),
-    "90": darken(0.36, color),
+    "00": lighten(0.42, color),
+    "05": lighten(0.38, color),
+    "10": lighten(0.32, color),
+    "20": lighten(0.25, color),
+    "30": lighten(0.18, color),
+    "40": lighten(0.10, color),
+    "50": color,
+    "60": darken(0.07, color),
+    "70": darken(0.14, color),
+    "80": darken(0.20, color),
+    "90": darken(0.25, color),
   } as Palette;
 }
 

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const ColorText = styled.td<{ color: string }>`
   color: ${({ color }) => color};
+  text-transform: lowercase;
 `;
 
 const ColorBar = styled.td<{ color: string }>`
@@ -15,7 +16,7 @@ const ColorRow = ({ hex, text }: { hex: string; text: string }) => {
     <tr>
       <ColorText color={hex}>{text}</ColorText>
       <ColorBar color={hex} />
-      <ColorText color={hex}>{hex}</ColorText>
+      {/* <ColorText color={hex}>{hex}</ColorText> */}
     </tr>
   );
 };
