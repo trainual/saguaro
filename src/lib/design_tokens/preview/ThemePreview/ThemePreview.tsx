@@ -106,11 +106,35 @@ const ThemePreview = () => {
 
       <StyleGroupHeader title="Brand" />
       <StyleGroupBody>
-        <ColorRow hex={vars.trainualBrandPurple} text="trainual-brand-purple" />
-        <ColorRow hex={vars.trainualBrandGreen} text="trainual-brand-green" />
-        <ColorRow hex={vars.trainualBrandYellow} text="trainual-brand-yellow" />
-        <ColorRow hex={vars.trainualBrandMagenta} text="trainual-brand-magenta" />
-        <ColorRow hex={vars.trainualBrandBlue} text="trainual-brand-blue" />
+        <ColorRow hex={vars.trainualBrandPurpleSurfaceLight} text="trainual-brand-purple-surface-light" />
+        <ColorRow hex={vars.trainualBrandPurpleSurface} text="trainual-brand-purple-surface" />
+        <ColorRow hex={vars.trainualBrandPurpleSubdued} text="trainual-brand-purple-subdued" />
+        <ColorRow hex={vars.trainualBrandPurpleMedium} text="trainual-brand-purple-medium" />
+        <ColorRow hex={vars.trainualBrandPurpleStrong} text="trainual-brand-purple-strong" />
+
+        <ColorRow hex={vars.trainualBrandGreenSurfaceLight} text="trainual-brand-green-surface-light" />
+        <ColorRow hex={vars.trainualBrandGreenSurface} text="trainual-brand-green-surface" />
+        <ColorRow hex={vars.trainualBrandGreenSubdued} text="trainual-brand-green-subdued" />
+        <ColorRow hex={vars.trainualBrandGreenMedium} text="trainual-brand-green-medium" />
+        <ColorRow hex={vars.trainualBrandGreenStrong} text="trainual-brand-green-strong" />
+
+        <ColorRow hex={vars.trainualBrandYellowSurfaceLight} text="trainual-brand-yellow-surface-light" />
+        <ColorRow hex={vars.trainualBrandYellowSurface} text="trainual-brand-yellow-surface" />
+        <ColorRow hex={vars.trainualBrandYellowSubdued} text="trainual-brand-yellow-subdued" />
+        <ColorRow hex={vars.trainualBrandYellowMedium} text="trainual-brand-yellow-medium" />
+        <ColorRow hex={vars.trainualBrandYellowStrong} text="trainual-brand-yellow-strong" />
+
+        <ColorRow hex={vars.trainualBrandMagentaSurfaceLight} text="trainual-brand-magenta-surface-light" />
+        <ColorRow hex={vars.trainualBrandMagentaSurface} text="trainual-brand-magenta-surface" />
+        <ColorRow hex={vars.trainualBrandMagentaSubdued} text="trainual-brand-magenta-subdued" />
+        <ColorRow hex={vars.trainualBrandMagentaMedium} text="trainual-brand-magenta-medium" />
+        <ColorRow hex={vars.trainualBrandMagentaStrong} text="trainual-brand-magenta-strong" />
+
+        <ColorRow hex={vars.trainualBrandBlueSurfaceLight} text="trainual-brand-blue-surface-light" />
+        <ColorRow hex={vars.trainualBrandBlueSurface} text="trainual-brand-blue-surface" />
+        <ColorRow hex={vars.trainualBrandBlueSubdued} text="trainual-brand-blue-subdued" />
+        <ColorRow hex={vars.trainualBrandBlueMedium} text="trainual-brand-blue-medium" />
+        <ColorRow hex={vars.trainualBrandBlueStrong} text="trainual-brand-blue-strong" />
       </StyleGroupBody>
 
       <StyleGroupHeader title="Defaults" />

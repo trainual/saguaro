@@ -8,7 +8,7 @@ const ColorText = styled.td<{ color: string }>`
 const ColorBar = styled.td<{ color: string }>`
   background-color: ${({ color }) => color};
   height: 100%;
-  width: 80%;
+  width: 50%;
 `;
 
 const ColorRow = ({ hex, text }: { hex: string; text: string }) => {
