@@ -60,12 +60,12 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
     stateFavorite: yellow[50],
     stateSuccess: green[50],
 
-    stateBadgeTrainual: purple["00"],
+    stateBadgeTrainual: purple["05"],
     stateBadgeInfo: blue["05"],
     stateBadgeError: red["05"],
     stateBadgeCaution: orange["05"],
-    stateBadgeSuccess: green["05"],
-    stateBadgeGeneral: neutral["05"],
+    stateBadgeSuccess: green["00"],
+    stateBadgeGeneral: neutral[15],
 
     stateBackgroundInfo: blue["00"],
     stateBackgroundError: red["00"],
