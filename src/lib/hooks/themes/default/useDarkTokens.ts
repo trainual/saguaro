@@ -27,11 +27,11 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
     foundationSurface2: neutral[90],
 
     // Border
-    borderSurface1: neutral["05"],
-    borderSurface2: neutral[10],
-    borderDefault: neutral[50],
-    borderHover: neutral[70],
-    borderDisabled: neutral[30],
+    borderSurface1: neutral[10],
+    borderSurface2: neutral[15],
+    borderDefault: neutral[40],
+    borderHover: neutral[60],
+    borderDisabled: neutral[25],
 
     // Text
     textDefault: neutral[80],
@@ -54,17 +54,17 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
     accentStrong2: brand[90],
 
     // State
-    stateInfo: blue[50],
+    stateInfo: blue[40],
     stateError: red[50],
     stateCaution: orange[50],
-    stateFavorite: yellow[50],
     stateSuccess: green[50],
+    stateFavorite: yellow[50],
 
     stateBadgeTrainual: purple["05"],
     stateBadgeInfo: blue["05"],
     stateBadgeError: red["05"],
     stateBadgeCaution: orange["05"],
-    stateBadgeSuccess: green["00"],
+    stateBadgeSuccess: green["05"],
     stateBadgeGeneral: neutral[15],
 
     stateBackgroundInfo: blue["00"],
@@ -72,7 +72,7 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
     stateBackgroundCaution: orange["00"],
     stateBackgroundSuccess: green["00"],
 
-    stateHoverInfo: blue[70],
+    stateHoverInfo: blue[60],
     stateHoverError: red[70],
     stateHoverCaution: orange[70],
     stateHoverSuccess: green[70],
@@ -161,7 +161,7 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
     // A11y
     focusOutlineColor: "#99C8FF",
 
-		// Deprecated
+    // Deprecated
     anIcecreamShopClosesEverytimeYouUseThisColor: "#FFF6DD",
     oneOffOchrePleaseDoNotUse: "#FFF1C6",
     youWillMakeMattCryIfYouUseThis: "#FFD24B",
