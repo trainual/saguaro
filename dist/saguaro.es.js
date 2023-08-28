@@ -1007,7 +1007,7 @@ const Ba = (a, r) => Kr(r) ? {
     // Border
     borderSurface1: t[10],
     borderSurface2: t[15],
-    borderDefault: t[40],
+    borderDefault: t[25],
     borderHover: t[60],
     borderDisabled: t[25],
     // Text
@@ -1151,7 +1151,7 @@ const Ba = (a, r) => Kr(r) ? {
     // Border
     borderSurface1: t[10],
     borderSurface2: t[15],
-    borderDefault: t[40],
+    borderDefault: t[25],
     borderHover: t[60],
     borderDisabled: t[25],
     // Text

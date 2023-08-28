@@ -29,7 +29,7 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
     // Border
     borderSurface1: neutral[10],
     borderSurface2: neutral[15],
-    borderDefault: neutral[40],
+    borderDefault: neutral[25],
     borderHover: neutral[60],
     borderDisabled: neutral[25],
 
