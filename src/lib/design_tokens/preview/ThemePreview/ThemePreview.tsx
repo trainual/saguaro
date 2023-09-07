@@ -137,16 +137,27 @@ const ThemePreview = () => {
         <ColorRow hex={vars.trainualBrandBlueStrong} text="trainual-brand-blue-strong" />
       </StyleGroupBody>
 
-      <StyleGroupHeader title="Defaults" />
+      <StyleGroupHeader
+        title="Preview"
+        description="Palette preview values. Should only be used for places where the user is picking a color palette."
+      />
       <StyleGroupBody>
-        <ColorRow hex={vars.blueDefault} text="blue-default" />
-        <ColorRow hex={vars.greenDefault} text="green-default" />
-        <ColorRow hex={vars.magentaDefault} text="magenta-default" />
-        <ColorRow hex={vars.neutralDefault} text="neutral-default" />
-        <ColorRow hex={vars.orangeDefault} text="orange-default" />
-        <ColorRow hex={vars.purpleDefault} text="purple-default" />
-        <ColorRow hex={vars.redDefault} text="red-default" />
-        <ColorRow hex={vars.yellowDefault} text="yellow-default" />
+        <ColorRow hex={vars.previewBluePrimary} text="preview-blue-primary" />
+        <ColorRow hex={vars.previewBlueSecondary} text="preview-blue-secondary" />
+        <ColorRow hex={vars.previewGreenPrimary} text="preview-green-primary" />
+        <ColorRow hex={vars.previewGreenSecondary} text="preview-green-secondary" />
+        <ColorRow hex={vars.previewMagentaPrimary} text="preview-magenta-primary" />
+        <ColorRow hex={vars.previewMagentaSecondary} text="preview-magenta-secondary" />
+        <ColorRow hex={vars.previewNeutralPrimary} text="preview-neutral-primary" />
+        <ColorRow hex={vars.previewNeutralSecondary} text="preview-neutral-secondary" />
+        <ColorRow hex={vars.previewOrangePrimary} text="preview-orange-primary" />
+        <ColorRow hex={vars.previewOrangeSecondary} text="preview-orange-secondary" />
+        <ColorRow hex={vars.previewPurplePrimary} text="preview-purple-primary" />
+        <ColorRow hex={vars.previewPurpleSecondary} text="preview-purple-secondary" />
+        <ColorRow hex={vars.previewRedPrimary} text="preview-red-primary" />
+        <ColorRow hex={vars.previewRedSecondary} text="preview-red-secondary" />
+        <ColorRow hex={vars.previewYellowPrimary} text="preview-yellow-primary" />
+        <ColorRow hex={vars.previewYellowSecondary} text="preview-yellow-secondary" />
       </StyleGroupBody>
     </StyleTable>
   );

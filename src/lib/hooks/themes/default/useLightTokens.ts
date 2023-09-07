@@ -119,14 +119,22 @@ const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
 
     // The representative for each palette.
     //  Used in places like the palette picker.
-    blueDefault: blue[50],
-    greenDefault: green[50],
-    magentaDefault: magenta[50],
-    neutralDefault: neutral[50],
-    orangeDefault: orange[50],
-    purpleDefault: purple[50],
-    redDefault: red[50],
-    yellowDefault: yellow[50],
+    previewBluePrimary: blue[50],
+    previewBlueSecondary: blue['05'],
+    previewGreenPrimary: green[50],
+    previewGreenSecondary: green['05'],
+    previewMagentaPrimary: magenta[50],
+    previewMagentaSecondary: magenta['05'],
+    previewNeutralPrimary: neutral[50],
+    previewNeutralSecondary: neutral['05'],
+    previewOrangePrimary: orange[50],
+    previewOrangeSecondary: orange['05'],
+    previewPurplePrimary: purple[50],
+    previewPurpleSecondary: purple['05'],
+    previewRedPrimary: red[50],
+    previewRedSecondary: red['05'],
+    previewYellowPrimary: yellow[50],
+    previewYellowSecondary: yellow['05'],
 
     // Drop Shadows
     shadowBackground1: "rgba(0, 0, 0, 0.1)",
