@@ -12,3 +12,4 @@ export { default as useHeightTokens } from './hooks/useHeightTokens';
 export { default as useSpacingTokens } from './hooks/useSpacingTokens';
 export type { default as SaguaroTheme } from './types/SaguaroTheme';
 export { default as SaguaroThemeProvider } from './components/SaguaroThemeProvider';
+export { getPrimaryPreviewColor, getSecondaryPreviewColor } from './helpers/color';
