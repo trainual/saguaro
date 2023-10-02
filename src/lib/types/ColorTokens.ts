@@ -20,7 +20,6 @@ type ColorTokens = {
   accentPrimaryDefault: string;
   accentPrimaryHover: string;
   accentPrimaryPressed: string;
-  accentPrimaryDisabled: string;
   accentSubdued1: string;
   accentSubdued2: string;
   accentSubdued3: string;

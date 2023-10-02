@@ -53,7 +53,6 @@ const ThemePreview = () => {
         <ColorRow hex={vars.accentPrimaryDefault} text="accent-primary-default" />
         <ColorRow hex={vars.accentPrimaryHover} text="accent-primary-hover" />
         <ColorRow hex={vars.accentPrimaryPressed} text="accent-primary-pressed" />
-        <ColorRow hex={vars.accentPrimaryDisabled} text="accent-primary-disabled" />
         <ColorRow hex={vars.accentSubdued1} text="accent-subdued-1" />
         <ColorRow hex={vars.accentSubdued2} text="accent-subdued-2" />
         <ColorRow hex={vars.accentSubdued3} text="accent-subdued-3" />
