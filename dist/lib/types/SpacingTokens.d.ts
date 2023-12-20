@@ -1,11 +1,11 @@
 type SpacingTokens = {
-    spacer2xs: string;
-    spacerXs: string;
-    spacerSm: string;
-    spacerMd: string;
-    spacerLg: string;
-    spacerXl: string;
-    spacer2xl: string;
-    spacer3xl: string;
+    spacerSm1: string;
+    spacerSm2: string;
+    spacerSm3: string;
+    spacerMd2: string;
+    spacerMd3: string;
+    spacerLg1: string;
+    spacerLg2: string;
+    spacerLg3: string;
 };
 export default SpacingTokens;
