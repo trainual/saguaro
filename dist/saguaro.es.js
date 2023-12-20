@@ -1314,6 +1314,7 @@ const Da = (a, r) => Zr(r) ? {
   spacerSm1: "0.125rem",
   spacerSm2: "0.25rem",
   spacerSm3: "0.5rem",
+  spacerMd1: "0.75rem",
   spacerMd2: "1rem",
   spacerMd3: "1.5rem",
   spacerLg1: "2rem",

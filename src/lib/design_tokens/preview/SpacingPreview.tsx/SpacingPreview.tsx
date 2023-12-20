@@ -9,6 +9,7 @@ const SpacingPreview = () => {
       spacerSm1,
       spacerSm2,
       spacerSm3,
+      spacerMd1,
       spacerMd2,
       spacerMd3,
       spacerLg1,
@@ -24,6 +25,7 @@ const SpacingPreview = () => {
         <SpacingRow text='spacer-sm-1' spacing={spacerSm1} />
         <SpacingRow text='spacer-sm-2' spacing={spacerSm2} />
         <SpacingRow text='spacer-sm-3' spacing={spacerSm3} />
+        <SpacingRow text='spacer-md-1' spacing={spacerMd1} />
         <SpacingRow text='spacer-md-2' spacing={spacerMd2} />
         <SpacingRow text='spacer-md-3' spacing={spacerMd3} />
         <SpacingRow text='spacer-lg-1' spacing={spacerLg1} />

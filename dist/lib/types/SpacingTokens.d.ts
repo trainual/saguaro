@@ -2,6 +2,7 @@ type SpacingTokens = {
     spacerSm1: string;
     spacerSm2: string;
     spacerSm3: string;
+    spacerMd1: string;
     spacerMd2: string;
     spacerMd3: string;
     spacerLg1: string;
