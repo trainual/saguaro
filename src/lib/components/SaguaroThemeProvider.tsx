@@ -12,6 +12,7 @@ import useSpacingTokens from '../hooks/useSpacingTokens';
 import useFontTokens from '../hooks/useFontTokens';
 import PaletteOption from '../types/PaletteOption';
 import SaguaroTheme from '../types/SaguaroTheme';
+import usePaletteBoard from '../hooks/usePaletteBoard';
 
 const GlobalFonts = createGlobalStyle`
   body * {
@@ -28,6 +29,7 @@ type Props = {
 };
 
 const SaguaroThemeProvider = ({ brandOption, mode, children }: Props) => {
+  const paletteTokens = usePaletteBoard(mode, brandOption);
   const borderTokens = useBorderTokens();
   const fontTokens = useFontTokens();
   const heightTokens = useHeightTokens();
@@ -40,7 +42,7 @@ const SaguaroThemeProvider = ({ brandOption, mode, children }: Props) => {
     ...spacingTokens,
   };
 
-  const theme: SaguaroTheme = { constants, mode, brand: brandOption, vars: colorTokens };
+  const theme: SaguaroTheme = { constants, mode, brand: brandOption, vars: colorTokens, palettes: paletteTokens };
 
   return (
     <>

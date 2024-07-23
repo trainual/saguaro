@@ -16,6 +16,7 @@ export { default as useColorTokens } from './hooks/useColorTokens'
 export { default as useFontTokens } from './hooks/useFontTokens'
 export { default as useHeightTokens } from './hooks/useHeightTokens'
 export { default as useSpacingTokens } from './hooks/useSpacingTokens'
+export { default as usePaletteBoard } from './hooks/usePaletteBoard'
 
 // Styled Components Integrations
 export type { default as SaguaroTheme } from './types/SaguaroTheme'

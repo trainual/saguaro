@@ -119,21 +119,21 @@ const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
     // The representative for each palette.
     //  Used in places like the palette picker.
     previewBluePrimary: blue[50],
-    previewBlueSecondary: blue['05'],
+    previewBlueSecondary: blue["05"],
     previewGreenPrimary: green[50],
-    previewGreenSecondary: green['05'],
+    previewGreenSecondary: green["05"],
     previewMagentaPrimary: magenta[50],
-    previewMagentaSecondary: magenta['05'],
+    previewMagentaSecondary: magenta["05"],
     previewNeutralPrimary: neutral[50],
-    previewNeutralSecondary: neutral['05'],
+    previewNeutralSecondary: neutral["05"],
     previewOrangePrimary: orange[50],
-    previewOrangeSecondary: orange['05'],
+    previewOrangeSecondary: orange["05"],
     previewPurplePrimary: purple[50],
-    previewPurpleSecondary: purple['05'],
+    previewPurpleSecondary: purple["05"],
     previewRedPrimary: red[50],
-    previewRedSecondary: red['05'],
+    previewRedSecondary: red["05"],
     previewYellowPrimary: yellow[50],
-    previewYellowSecondary: yellow['05'],
+    previewYellowSecondary: yellow["05"],
 
     // Drop Shadows
     shadowBackground1: "rgba(0, 0, 0, 0.1)",
@@ -167,7 +167,7 @@ const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
     // A11y
     focusOutlineColor: "#99C8FF",
 
-		// Deprecated
+    // Deprecated
     anIcecreamShopClosesEverytimeYouUseThisColor: "#FFF6DD",
     oneOffOchrePleaseDoNotUse: "#FFF1C6",
     youWillMakeMattCryIfYouUseThis: "#FFD24B",
