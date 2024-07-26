@@ -23,7 +23,8 @@ export type { default as SaguaroTheme } from './types/SaguaroTheme'
 export { default as SaguaroThemeProvider } from './components/SaguaroThemeProvider'
 
 // Helper Functions
-export { 
+export {
+	isPalette,
 	getPrimaryPreviewColor,
 	getSecondaryPreviewColor
 } from './helpers/color'
