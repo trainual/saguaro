@@ -2005,6 +2005,7 @@ export {
   Wa as SaguaroThemeProvider,
   Ya as getPrimaryPreviewColor,
   Ha as getSecondaryPreviewColor,
+  Zr as isPalette,
   Or as useBorderTokens,
   _a as useColorTokens,
   Oa as useFontTokens,
