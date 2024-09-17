@@ -8,5 +8,6 @@ type SpacingTokens = {
     spacerLg1: string;
     spacerLg2: string;
     spacerLg3: string;
+    spacerLg4: string;
 };
 export default SpacingTokens;
