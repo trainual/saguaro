@@ -1319,7 +1319,8 @@ const Da = (a, r) => Zr(r) ? {
   spacerMd3: "1.5rem",
   spacerLg1: "2rem",
   spacerLg2: "2.5rem",
-  spacerLg3: "3rem"
+  spacerLg3: "3rem",
+  spacerLg4: "4rem"
 });
 var be = { exports: {} }, $ = {};
 /*
