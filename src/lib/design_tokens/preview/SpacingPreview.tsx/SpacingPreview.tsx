@@ -15,6 +15,7 @@ const SpacingPreview = () => {
       spacerLg1,
       spacerLg2,
       spacerLg3,
+      spacerLg4,
     },
   } = useTheme();
 
@@ -31,6 +32,7 @@ const SpacingPreview = () => {
         <SpacingRow text='spacer-lg-1' spacing={spacerLg1} />
         <SpacingRow text='spacer-lg-2' spacing={spacerLg2} />
         <SpacingRow text='spacer-lg-3' spacing={spacerLg3} />
+        <SpacingRow text='spacer-lg-4' spacing={spacerLg4} />
       </StyleGroupBody>
 
     </StyleTable>
