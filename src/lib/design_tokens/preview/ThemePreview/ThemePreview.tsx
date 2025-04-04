@@ -59,7 +59,7 @@ const ThemePreview = () => {
         <ColorRow hex={vars.accentSubdued4} text="accent-subdued-4" />
         <ColorRow hex={vars.accentStrong1} text="accent-strong-1" />
         <ColorRow hex={vars.accentStrong2} text="accent-strong-2" />
-        <ColorRow hex={vars.contrastTextForAccentPrimary} text="contrast-text-for-accent-primary" />
+        <ColorRow hex={vars.textAccentContrast} text="text-accent-contrast" />
       </StyleGroupBody>
 
       <StyleGroupHeader title="State" description="Critical UI States" />

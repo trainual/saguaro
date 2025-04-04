@@ -1,6 +1,6 @@
 import ColorTokens from "../../../types/ColorTokens"
 import PaletteOption from "../../../types/PaletteOption";
-import useContrastTextForAccentPrimary from "../../useContrastTextForAccentPrimary";
+import useTextAccentContrast from "../../useTextAccentContrast.ts";
 import usePaletteBoard from "../../usePaletteBoard";
 
 const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
@@ -19,7 +19,7 @@ const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
   const accentPrimaryDefault = brand[50];
   const textDefault = neutral[80];
   const textSurface = neutral["00"];
-  const contrastTextForAccentPrimary = useContrastTextForAccentPrimary(accentPrimaryDefault, textDefault, textSurface);
+  const textAccentContrast = useTextAccentContrast(accentPrimaryDefault, textDefault, textSurface);
 
 	return {
     // Foundation
@@ -56,7 +56,7 @@ const useLightTokens = (brandOption: PaletteOption | string): ColorTokens => {
     accentSubdued4: brand[20],
     accentStrong1: brand[80],
     accentStrong2: brand[90],
-    contrastTextForAccentPrimary,
+    textAccentContrast,
 
     // State
     stateInfo: blue[40],

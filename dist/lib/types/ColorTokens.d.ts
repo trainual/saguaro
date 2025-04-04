@@ -26,7 +26,7 @@ type ColorTokens = {
     accentSubdued4: string;
     accentStrong1: string;
     accentStrong2: string;
-    contrastTextForAccentPrimary: string;
+    textAccentContrast: string;
     stateInfo: string;
     stateError: string;
     stateCaution: string;

@@ -17,7 +17,7 @@ const hexToRGB = (hex: string): RGB => {
   return { r, g, b };
 };
 
-const useContrastTextForAccentPrimary = (
+const useTextAccentContrast = (
   accentPrimaryDefault: string,
   textDefault: string,
   textSurface: string
@@ -28,4 +28,4 @@ const useContrastTextForAccentPrimary = (
   return luminance > 0.65 ? textDefault : textSurface;
 };
 
-export default useContrastTextForAccentPrimary;
+export default useTextAccentContrast;

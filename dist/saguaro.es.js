@@ -1040,7 +1040,7 @@ const Oa = (a, r) => ra(r) ? {
     accentSubdued4: r[20],
     accentStrong1: r[80],
     accentStrong2: r[90],
-    contrastTextForAccentPrimary: C,
+    textAccentContrast: C,
     // State
     stateInfo: n[40],
     stateError: d[50],
@@ -1192,7 +1192,7 @@ const Oa = (a, r) => ra(r) ? {
     accentSubdued4: r[20],
     accentStrong1: r[80],
     accentStrong2: r[90],
-    contrastTextForAccentPrimary: C,
+    textAccentContrast: C,
     // State
     stateInfo: n[40],
     stateError: d[50],
