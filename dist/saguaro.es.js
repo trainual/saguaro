@@ -19,7 +19,7 @@ const kr = () => ({
   return { r: n, g: o, b: s };
 }, Je = (a, r, n) => {
   const { r: o, g: s, b: t } = Ir(a);
-  return (o * ue.r + s * ue.g + t * ue.b) / jr > 0.65 ? r : n;
+  return (o * ue.r + s * ue.g + t * ue.b) / jr > 0.62 ? r : n;
 }, Mr = {
   "00": "#EBF9FF",
   "05": "#D6F3FF",
