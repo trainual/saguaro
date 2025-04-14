@@ -25,7 +25,7 @@ const useTextAccentContrast = (
   const { r, g, b } = hexToRGB(accentPrimaryDefault);
   const luminance = (r * LUMINANCE_WEIGHTS.r + g * LUMINANCE_WEIGHTS.g + b * LUMINANCE_WEIGHTS.b) / RGB_MAX_VALUE;
 
-  return luminance > 0.65 ? textDefault : textSurface;
+  return luminance > 0.62 ? textDefault : textSurface;
 };
 
 export default useTextAccentContrast;
