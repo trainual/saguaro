@@ -1,5 +1,6 @@
 import ColorTokens from "../../../types/ColorTokens"
 import PaletteOption from "../../../types/PaletteOption";
+import useTextAccentContrast from "../../useTextAccentContrast.ts";
 import usePaletteBoard from '../../usePaletteBoard';
 
 
@@ -16,7 +17,12 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
 		yellow,
 	} = usePaletteBoard('dark', brandOption);
 
-	return {
+    const accentPrimaryDefault = brand[50];
+    const textDefault = neutral[80];
+    const textSurface = neutral["00"];
+    const textAccentContrast = useTextAccentContrast(accentPrimaryDefault, textDefault, textSurface);
+
+    return {
     // Foundation
     foundationHover: neutral[10],
     foundationBase1: neutral["05"],
@@ -34,15 +40,15 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
     borderDisabled: neutral[25],
 
     // Text
-    textDefault: neutral[80],
+    textDefault,
     textSubdued: neutral[50],
     textPlaceholder: neutral[40],
-    textSurface: neutral["00"],
+    textSurface,
     textHover: neutral[90],
     textDisabled: neutral[30],
 
     // Accent
-    accentPrimaryDefault: brand[50],
+    accentPrimaryDefault,
     accentPrimaryHover: brand[60],
     accentPrimaryPressed: brand[70],
     accentSubdued1: brand["00"],
@@ -51,6 +57,7 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
     accentSubdued4: brand[20],
     accentStrong1: brand[80],
     accentStrong2: brand[90],
+    textAccentContrast,
 
     // State
     stateInfo: blue[40],
