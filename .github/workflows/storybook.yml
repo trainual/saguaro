@@ -28,6 +28,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Deploy storybook to s3
-        run: yarn deploy-storybook
+        run: |
+          OUT_DIR="out$RANDOM"
+          echo "📦 Building Storybook to $OUT_DIR..."
+          npm run build-storybook -- -o "$OUT_DIR"
+          echo "☁️ Syncing to S3..."
+          aws s3 sync "$OUT_DIR" s3://saguaro-storybook
+          echo "✅ Done. Storybook deployed from $OUT_DIR"
         env:
           NODE_OPTIONS: --max-old-space-size=7680
