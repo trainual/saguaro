@@ -4,6 +4,7 @@
    borderRadiusMd: string;
    borderRadiusLg: string;
    borderRadiusXl: string;
+   borderRadius2Xl: string;
    borderRadiusCircle: string;
    borderRadiusEndcap: string;
 
