@@ -1,4 +1,4 @@
-import Palette, { ExpandedPalette } from "./Palette";
+import { default as Palette, ExpandedPalette } from './Palette';
 export type CorePaletteBoard = {
     blue: Palette;
     green: Palette;
