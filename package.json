@@ -2,9 +2,9 @@
   "name": "saguaro",
   "private": true,
   "engines": {
-    "node": "22.15.1"
+    "node": "24.13.0"
   },
-  "version": "0.0.0",
+  "version": "0.4.9",
   "files": [
     "dist"
   ],
