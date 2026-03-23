@@ -181,6 +181,11 @@ const useDarkTokens = (brandOption: PaletteOption | string): ColorTokens => {
     youWillMakeMattCryIfYouUseThis: "#FFD24B",
     theOneOffPlanToggleThatShouldNotBeUsed: "#FDF393",
     thisIsAOneOffGreyAndWillMakeYouCryIfUsed: "#C5D3DA",
+
+    // AI Suggestions
+    aiSuggestionTextRemoved: "#A4A3A8",
+    aiSuggestionBackgroundAdded: "#E3FFE8",
+    aiSuggestionBackgroundAddedSelected: "#B8FFC5",
   } as ColorTokens;
 }
 
