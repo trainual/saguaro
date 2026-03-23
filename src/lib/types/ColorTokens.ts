@@ -125,6 +125,9 @@ type ColorTokens = {
   youWillMakeMattCryIfYouUseThis: string;
   theOneOffPlanToggleThatShouldNotBeUsed: string;
   thisIsAOneOffGreyAndWillMakeYouCryIfUsed: string;
+  aiSuggestionTextRemoved: string;
+  aiSuggestionBackgroundAdded: string;
+  aiSuggestionBackgroundAddedSelected: string;
 };
 
 export default ColorTokens;
