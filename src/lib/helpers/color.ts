@@ -1,6 +1,6 @@
 import PaletteOption from "../types/PaletteOption";
 import PaletteBoard from '../design_tokens/colors/palette_boards/light'
-import { ColorTokens } from "..";
+import type { ColorTokens } from "..";
 
 export function ensureHex(color: PaletteOption | string) {
   if (color.startsWith("#")) {
