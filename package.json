@@ -4,7 +4,7 @@
   "engines": {
     "node": "24.13.0"
   },
-  "version": "0.4.9",
+  "version": "0.4.11",
   "files": [
     "dist"
   ],
@@ -14,9 +14,11 @@
   "typings": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/saguaro.es.js",
       "require": "./dist/saguaro.umd.js"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "type": "module",
   "scripts": {
