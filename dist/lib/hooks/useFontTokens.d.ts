@@ -1,3 +1,3 @@
-import { default as FontTokens } from '../types/FontTokens';
+import FontTokens from "../types/FontTokens";
 declare const useFontTokens: () => FontTokens;
 export default useFontTokens;
