@@ -1,5 +1,5 @@
 import BorderPreview from "./BorderPreview";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta = {
   title: "Design Tokens/Borders",
