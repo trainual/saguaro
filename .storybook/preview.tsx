@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
-import { Preview } from "@storybook/react";
-import { themes } from "@storybook/theming";
+import { Preview } from "@storybook/react-vite";
+import { themes } from "storybook/theming";
 import { useDarkMode } from "storybook-dark-mode";
 
 import SaguaroThemeProvider from '../src/lib/components/SaguaroThemeProvider';
