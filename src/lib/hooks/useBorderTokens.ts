@@ -9,6 +9,7 @@ const useBorderTokens = () => {
 		borderRadiusLg: '8px',
 		borderRadiusXl: '12px',
 		borderRadius2Xl: '16px',
+		borderRadius3Xl: '32px',
 		borderRadiusCircle: '50%',
 		borderRadiusEndcap: '100px',
 

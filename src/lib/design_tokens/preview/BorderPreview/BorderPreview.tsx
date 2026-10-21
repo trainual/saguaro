@@ -60,6 +60,7 @@ const BorderPreview = () => {
       borderRadiusLg,
       borderRadiusXl,
       borderRadius2Xl,
+      borderRadius3Xl,
       borderRadiusCircle,
       borderRadiusEndcap,
     },
@@ -77,6 +78,7 @@ const BorderPreview = () => {
         <BorderRow text='border-radius-lg' radius={borderRadiusLg} />
         <BorderRow text='border-radius-xl' radius={borderRadiusXl} />
         <BorderRow text='border-radius-2xl' radius={borderRadius2Xl} />
+        <BorderRow text='border-radius-3xl' radius={borderRadius3Xl} />
         <BorderRow text='border-radius-endcap' radius={borderRadiusEndcap} />
         <BorderRow text='border-radius-circle' radius={borderRadiusCircle} />
       </StyleGroupBody>
