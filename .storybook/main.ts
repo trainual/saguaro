@@ -4,7 +4,6 @@ const config: StorybookConfig = {
 
   addons: [
     '@storybook/addon-links',
-    '@storybook/addon-styling',
     'storybook-dark-mode',
     '@storybook/addon-docs'
   ],
