@@ -5,7 +5,8 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-links',
     'storybook-dark-mode',
-    '@storybook/addon-docs'
+    '@storybook/addon-docs',
+    '@storybook/addon-mcp'
   ],
 
   framework: {
