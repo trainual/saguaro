@@ -1,0 +1,79 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+import * as ThemeStories from './_.stories';
+
+<Meta of={ThemeStories} />
+
+# Themes
+
+A theme maps each semantic color token (`theme.vars`) to a step of a
+[palette](?path=/docs/design-tokens-palettes--guide) for a given brand.
+Saguaro has one theme, **Default**. Use these tokens for color in UI code: they
+follow the account's brand without any extra work.
+
+## Groups
+
+| Group | Use for | Example |
+|---|---|---|
+| Foundation | Page backgrounds, cards, modals, menu items | `foundation-base-1`, `foundation-surface-1`, `foundation-hover` |
+| Border | Inputs, cards, dividers | `border-default`, `border-hover`, `border-disabled` |
+| Text | Text that does not carry the brand | `text-default`, `text-subdued`, `text-placeholder`, `text-disabled` |
+| Accent | Anything that carries the brand: primary buttons, links, selection | `accent-primary-default`, `accent-primary-hover`, `accent-subdued-1` |
+| State | Info, error, caution, success and favorite states; badges; completion | `state-error`, `state-badge-success`, `state-completion-high` |
+| Charts & Graphs | Data visualisation | `chart-blue-1`, `chart-red-3` |
+| Brand | Trainual's own brand colors, independent of the account's brand | `trainual-brand-purple-medium` |
+| Preview | Swatches in a palette picker, and nowhere else | `preview-blue-primary` |
+
+## Foundation: backgrounds
+
+| Token | Use for |
+|---|---|
+| `foundation-surface-1` | **The default surface** (white): cards, modals, panels, menus, dropdowns. |
+| `foundation-base-1` | The page canvas behind surfaces, and recessed areas inside a surface (an inner sidebar or nested card). Also a common hover background. |
+| `foundation-base-2` | Skeleton loaders, placeholders and drop targets, icon tiles, hover and pressed backgrounds. |
+| `foundation-base-3` | Disabled or secondary fills, progress-bar tracks. |
+| `foundation-base-4` | Stronger grey fills, such as a disabled toggle. Rarely needed. |
+| `foundation-surface-2` | **The inverse (near-black) fill**, not a second light surface: selected counters and steps, dark tooltips. |
+
+## Border: strokes
+
+| Token | Use for |
+|---|---|
+| `border-default` | **Form controls**: inputs, text areas, selects, checkboxes. |
+| `border-surface-2` | Card, container and menu outlines; dividers. The usual choice for non-form borders. |
+| `border-surface-1` | A lighter alternative to `border-surface-2`. Today the two are used interchangeably; prefer `border-surface-2` unless the design asks for lighter. |
+| `border-hover` / `border-disabled` | Hover and disabled states of form-control borders. |
+
+## Accent: the brand
+
+| Token | Use for |
+|---|---|
+| `accent-primary-default` / `accent-primary-hover` / `accent-primary-pressed` | Primary buttons, links, selected controls. |
+| `accent-subdued-1` | **Selected, open or active tinted backgrounds**: a selected date, an open dropdown, an active row. |
+| `accent-subdued-2`–`3` | Slightly stronger tints for highlights. Rarely needed. |
+| `accent-subdued-4` | Accent-tinted borders, e.g. a selected or hovered outline. |
+| `accent-strong-1` / `2` | Dark brand-colored text or fills. Rare. |
+
+## Pairing rules
+
+- Text on an accent background: `text-accent-contrast`. It is `text-default` when
+  `accent-primary-default` is light (luminance above 0.62) and `text-surface`
+  otherwise, so it stays readable for any custom brand color.
+- Focus rings: `focus-outline-color` at `border-width-lg`, as an `outline`.
+- Hover and pressed states have their own tokens (`accent-primary-hover`,
+  `accent-primary-pressed`, `state-hover-error`, …). Use them rather than darkening
+  a color in place.
+
+## Known gaps
+
+Saguaro defines more color tokens than this preview shows. These exist but have
+no row above:
+
+- **Shadows**: `shadow-top-xsmall`–`shadow-top-large`, `shadow-center-small`–`shadow-center-large`,
+  `shadow-special-wysiwyg`, `shadow-special-data-table`, their `shadow-color-*`
+  counterparts, and `shadow-background-1`–`shadow-background-3`.
+- **Accessibility**: `focus-outline-color` (`#99C8FF`).
+- **AI suggestions**: `ai-suggestion-text-removed`, `ai-suggestion-background-added`,
+  `ai-suggestion-background-added-selected`.
+- **Deprecated**: the five one-off colors listed on the
+  [Design Tokens overview](?path=/docs/design-tokens-overview--guide).

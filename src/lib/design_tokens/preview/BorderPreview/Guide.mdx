@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+import * as BorderStories from './_.stories';
+
+<Meta of={BorderStories} />
+
+# Borders
+
+Two scales: **radius** (`border-radius-*`) for corners and **width** (`border-width-*`)
+for strokes. They are separate scales; don't use one for the other.
+
+## Radius: pick by the size of the container
+
+| Token | Value | Use for |
+|---|---|---|
+| `border-radius-sm` | `2px` | Checkbox and radio boxes, code blocks. |
+| `border-radius-md` | `4px` | Small items inside a container: menu and select options, tooltips, tags, segmented-control segments, small icon tiles. |
+| `border-radius-lg` | `8px` | **The default container radius.** Inputs, menus and dropdown panels, flyouts, cards, banners. |
+| `border-radius-xl` | `12px` | Larger cards and popovers. |
+| `border-radius-2xl` | `16px` | Large feature cards: plan and selector cards, dashboard widgets, images. |
+| `border-radius-3xl` | `32px` | Modals only. |
+| `border-radius-endcap` | `100px` | Fully rounded ends at any height: buttons, pills, badges, search fields, skeleton text lines. |
+| `border-radius-circle` | `50%` | Square elements that should be circles: avatars, icon buttons, swatches, dots, toggle knobs. |
+
+`border-radius-xs` (`1px`) has no real radius use. Leave it alone.
+
+Nest radii smaller as you go in: a `border-radius-lg` card holds `border-radius-md` rows, not `border-radius-lg` ones.
+
+## Width: 1px unless there's a reason
+
+| Token | Value | Use for |
+|---|---|---|
+| `border-width-sm` | `1px` | **Almost every border.** Card, input and container outlines, dividers. |
+| `border-width-lg` | `2px` | Focus rings (an outline in `focus-outline-color`) and active-tab underlines. |
+| `border-width-xs` | `0.5px` | Floating dropdown and menu panels. |
+| `border-width-md` | `1.5px` | Dashed drop-target and placeholder outlines, chip-style radio borders. |
+| `border-width-xl` | `3px` | Emphasis: blockquote rules, highlighted upsell cards. |
+| `border-width-2xl` | `4px` | Accent bars (e.g. an inline message's left edge) and surface-colored "cutout" rings around overlapping avatars and chips. |
+
+## Don't
+
+- Use `border-radius-xs` as a 1px border width. Use `border-width-sm`.
+- Use `border-width-xl` / `border-width-2xl` as a radius. Pick a `border-radius-*`.
+- Hard-code `999px` or `50%`. Use `border-radius-endcap` / `border-radius-circle`.

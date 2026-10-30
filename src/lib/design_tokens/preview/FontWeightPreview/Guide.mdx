@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+import * as FontWeightStories from './_.stories';
+
+<Meta of={FontWeightStories} />
+
+# Font Weights
+
+Four weights do almost all the work:
+
+| Token | Value | Use for |
+|---|---|---|
+| `font-regular` | `400` | Body text, descriptions, subtitles, menu and select option text, button labels. |
+| `font-medium` | `500` | Labels, names, links, badges and pills, secondary titles. |
+| `font-semibold` | `600` | **Titles and headings**: card, section and page headers. |
+| `font-bold` | `700` | Numbers that need to stand out (prices, totals) and occasional hero titles. |
+
+## Selected states
+
+When a selected or active item gets heavier, step up one weight:
+`font-regular` → `font-medium`, or `font-medium` → `font-semibold`. Tabs, segmented
+controls and date pickers do this.
+
+## Rare weights
+
+`font-extralight` (`200`), `font-light` (`300`), `font-extrabold` (`800`) and
+`font-heavy` (`900`) appear only in a handful of one-off places, such as large
+score numbers and marketing banners. Don't reach for them in product UI without
+a design that calls for them.
+
+## Known gaps
+
+- **`font-heavy` (900) renders as 800 here.** Saguaro sets the Poppins family
+  but doesn't load the font files. This Storybook loads Poppins 200–800, so
+  there is no 900 face. Apps must load the weights they use themselves.

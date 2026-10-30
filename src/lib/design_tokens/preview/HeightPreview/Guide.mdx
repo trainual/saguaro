@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+import * as HeightStories from './_.stories';
+
+<Meta of={HeightStories} />
+
+# Heights
+
+Height tokens size interactive controls and the square things inside them, so
+buttons, inputs and rows of the same size line up in a toolbar or form.
+
+## Control sizes
+
+A component's `size` prop maps directly to a height token. Buttons, icon
+buttons, selects and pills all follow this:
+
+| Size | Token | Value | Typical use |
+|---|---|---|---|
+| `xs` | `height-xs` | `1.5rem` | Icon-sized squares: modal close buttons, pagination buttons, step markers, compact chips. |
+| `sm` | `height-sm` | `2rem` | Small buttons, chips, dropdown triggers, toggle rows. |
+| `md` | `height-md` | `2.25rem` | **The default.** Text inputs, search fields, date pickers, selects, dropdown menu rows. |
+| `lg` | `height-lg` | `2.5rem` | Large buttons, chip-style radios, color swatches, larger option rows. |
+
+`height-2xs` (`1rem`) is for icons and small images inside a control, not for
+the control itself.
+
+## How to apply them
+
+- Use the token as `height` for fixed controls, and as `min-height` for rows
+  whose content can wrap.
+- For square elements (icon buttons, swatches), use the same token for `width`
+  and `height`.
+- If a new component takes a `size` prop, map it to these tokens the same way
+  rather than inventing new heights.
+
+## Known gaps
+
+- Avatars hard-code their sizes (`1`, `1.5`, `2`, `2.5`rem and up). The first four
+  match `height-2xs`, `height-xs`, `height-sm` and `height-lg`, but don't use the
+  tokens.
+- There is no token above `2.5rem`; extra-large controls hard-code their height.
