@@ -8,13 +8,51 @@ import SaguaroThemeProvider from '../src/lib/components/SaguaroThemeProvider';
 
 import { useColorTokens } from '../src/lib';
 
-export const parameters = {
+type StorySortEntry = { title: string; type: 'docs' | 'story' };
+
+// storySort is babel-extracted and evaluated on its own, so it must stay
+// inline and self-contained, with no type annotations inside the arrow.
+const parameters: NonNullable<Preview['parameters']> & {
+  options: { storySort: (a: StorySortEntry, b: StorySortEntry) => number };
+} = {
   darkMode: {
     // Add overrides here for light theme
     light: { ...themes.normal },
 
     // Add overrides here for dark theme
     dark: { ...themes.dark },
+  },
+  options: {
+    // Floats "Overview" to the top of every level, then orders the
+    // top-level sections, then sorts alphabetically. Docs before stories.
+    storySort: (a, b) => {
+      const roots = ['Overview', 'Design Tokens', 'Components'];
+      const aSegments = a.title.split('/');
+      const bSegments = b.title.split('/');
+
+      for (let i = 0; i < Math.max(aSegments.length, bSegments.length); i++) {
+        const aSegment = aSegments[i];
+        const bSegment = bSegments[i];
+
+        if (aSegment === bSegment) continue;
+        if (aSegment === 'Overview' || bSegment === 'Overview') {
+          return aSegment === 'Overview' ? -1 : 1;
+        }
+        if (aSegment === undefined) return -1;
+        if (bSegment === undefined) return 1;
+        if (i === 0) {
+          const aRoot = roots.indexOf(aSegment);
+          const bRoot = roots.indexOf(bSegment);
+          return (aRoot === -1 ? roots.length : aRoot) - (bRoot === -1 ? roots.length : bRoot);
+        }
+
+        return aSegment.localeCompare(bSegment, undefined, { numeric: true });
+      }
+
+      if (a.type === b.type) return 0;
+
+      return a.type === 'docs' ? -1 : 1;
+    },
   },
 };
 
@@ -54,6 +92,9 @@ export const globalTypes = {
 };
 
 const preview: Preview = {
+  parameters,
+  // Generates a "Guide" docs page for every story file.
+  tags: ['autodocs'],
   decorators: [
     (Story, context) => {
       const componentStoryTheme =
