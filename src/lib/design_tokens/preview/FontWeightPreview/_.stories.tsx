@@ -1,5 +1,5 @@
 import FontWeightPreview from "./FontWeightPreview";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta = {
   title: "Design Tokens/Font Weights",
