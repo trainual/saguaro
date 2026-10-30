@@ -3,10 +3,12 @@ import { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta = {
   title: "Design Tokens/Heights",
-  component: HeightPreview
+  component: HeightPreview,
+  // Token pages get a hand-written Guide.mdx only where there is usage guidance.
+  tags: ["!autodocs"],
 } satisfies Meta<typeof HeightPreview>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Heights: Story = {};
+export const Preview: Story = {};
