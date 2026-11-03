@@ -1,0 +1,66 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Tokens/Overview" />
+
+# Design Tokens
+
+A token is a named value (a color, a size, a weight) that UI code uses instead of
+a literal.
+
+This section is the visual reference for every token Saguaro exports: colors,
+spacing, borders, heights and font weights.
+
+## Categories
+
+| Category | Theme key | Hook | Example |
+|---|---|---|---|
+| [Palettes](?path=/docs/design-tokens-palettes--guide) | `theme.palettes` | `usePaletteBoard` | `blue-50` |
+| [Themes](?path=/docs/design-tokens-themes--guide) (semantic colors) | `theme.vars` | `useColorTokens` | `text-subdued` |
+| [Spacing](?path=/docs/design-tokens-spacing--guide) | `theme.constants` | `useSpacingTokens` | `spacer-md-2` (`1rem`) |
+| [Borders](?path=/docs/design-tokens-borders--guide) | `theme.constants` | `useBorderTokens` | `border-radius-lg` (`8px`) |
+| [Heights](?path=/docs/design-tokens-heights--guide) | `theme.constants` | `useHeightTokens` | `height-md` (`2.25rem`) |
+| [Font Weights](?path=/docs/design-tokens-font-weights--guide) | `theme.constants` | `useFontTokens` | `font-semibold` (`600`) |
+
+Colors depend on the brand option. Everything in `theme.constants` is the same
+for every brand.
+
+## Choosing a token
+
+**Colors: reach for `theme.vars` first.** Semantic tokens such as
+`foundation-surface-1`, `text-default` and `accent-primary-default` describe a role, and
+they already resolve to the right step of the right palette for the current
+brand. Use `theme.palettes` only when no semantic token fits the role, and
+treat that as a sign the theme may be missing a token.
+
+**Brand colors: use the `accent-*` tokens, not a named palette.** The account's
+brand can be any palette or a custom hex code, so `accent-primary-default`
+follows it while `purple-50` never will. Put text on an accent
+background with `text-accent-contrast`, which picks dark or light text from the
+accent's luminance.
+
+**Sizes: use the scale, don't interpolate.** If a design calls for a value
+between two steps, pick the nearer step. Each category's **Guide** says which step
+fits which kind of element.
+
+## Deprecated tokens
+
+These color tokens exist only to support older UI. Don't use them in new code.
+The names are the warning.
+
+| Token | Value |
+|---|---|
+| `an-icecream-shop-closes-everytime-you-use-this-color` | `#FFF6DD` |
+| `one-off-ochre-please-do-not-use` | `#FFF1C6` |
+| `you-will-make-matt-cry-if-you-use-this` | `#FFD24B` |
+| `the-one-off-plan-toggle-that-should-not-be-used` | `#FDF393` |
+| `this-is-a-one-off-grey-and-will-make-you-cry-if-used` | `#C5D3DA` |
+
+The `preview-*-primary` / `preview-*-secondary` tokens are not deprecated, but they
+are only for places where the user picks a palette (such as a color picker).
+
+## Known gaps
+
+- **`font-heavy` (900) renders as 800 here.** See
+  [Font Weights › Known gaps](?path=/docs/design-tokens-font-weights--guide).
+- **Not every color token has a preview.** See
+  [Themes › Known gaps](?path=/docs/design-tokens-themes--guide).
