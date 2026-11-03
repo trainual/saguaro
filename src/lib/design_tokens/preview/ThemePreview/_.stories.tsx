@@ -2,7 +2,7 @@ import ThemePreview from "./ThemePreview";
 import { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta = {
-  title: "Design Tokens/Themes/Default",
+  title: "Design Tokens/Themes",
   component: ThemePreview
 } satisfies Meta<typeof ThemePreview>;
 

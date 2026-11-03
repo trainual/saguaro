@@ -9,4 +9,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Borders: Story = {};
+export const Preview: Story = {};

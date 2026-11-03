@@ -1,0 +1,75 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+import * as PaletteStories from './_.stories';
+
+<Meta of={PaletteStories} />
+
+# Palettes
+
+Palettes are the raw color scales every semantic color token is built from. Most
+UI code should use the [semantic tokens](?path=/docs/design-tokens-themes--guide)
+in `theme.vars` instead; reach for a palette step only when no semantic token
+fits.
+
+## When raw palettes are the right choice
+
+Direct palette use is rare and deliberate. It fits when the color comes from
+data or user choice, not from a UI role:
+
+- **User-pickable colors**, such as text and highlight colors in the editor.
+- **Data ramps**, such as a score running red → orange → yellow → green.
+
+For anything with a UI role (surface, border, text, selection), use a
+semantic token. That includes Trainual's own brand colors: use the
+`trainual-brand-*` tokens in `theme.vars`, not the `purple` palette and friends.
+
+## The scales
+
+| Palette | Steps | Notes |
+|---|---|---|
+| `brand` | `00`–`90` | The account's brand. Follows the paintbrush in the toolbar. |
+| `neutral` | `00`–`90`, plus `15`, `25`, `transparent-1`–`3` | Greys for surfaces, borders and text. |
+| `blue`, `green`, `magenta`, `orange`, `purple`, `red`, `yellow` | `00`–`90` | Fixed hues. |
+
+Each color is named palette, then step: `blue-70`, `neutral-05`,
+`neutral-transparent-1`. Steps run light to dark: `00` is the lightest tint,
+`50` is the base color, `90` is the darkest shade.
+
+## The brand palette
+
+An account's brand is set either by choosing one of our palettes or by entering
+a hex code.
+
+- **A palette (preferred)** (`purple`, `blue`, …): `brand` is that palette. Every
+  step of our palettes is hand-tuned, so we can make sure the accent colors have
+  enough contrast against our surfaces and text.
+- **A hex code** (`#245EA7`): `brand` is generated from it. The hex becomes
+  `brand-50`, steps `00`–`40` are lightened versions of it and `60`–`90` are
+  darkened versions. This exists because some customers want complete control over
+  their accent color. A generated palette can't guarantee contrast: a very light
+  or very dark hex gives weak `00` or `90` steps. `text-accent-contrast` still
+  picks readable text for the accent itself.
+
+## Dark mode
+
+Dark mode is not supported in Trainual today, but the palettes and themes
+already carry the plumbing for it. In dark mode, Saguaro switches to a dark set
+of palettes:
+
+- **`neutral` is inverted.** `00` is the darkest step (`#000000`) and `90` the
+  lightest (`#E5E5E5`), the reverse of light mode. Semantic tokens point at the
+  same steps in both modes, so `foundation-surface-1` (`neutral-00`) becomes black and
+  `text-default` (`neutral-80`) becomes light grey without any token changes.
+- **Every other palette is unchanged.** `blue`, `green`, `magenta`, `orange`,
+  `purple`, `red` and `yellow` have the same values in both modes, so
+  `00` is still their lightest step.
+- **Shadows are the only semantic tokens with their own dark values.**
+  `shadow-background-*` switch from black to white overlays, and the medium and
+  large shadows use the lighter `neutral-transparent-1`.
+- **Custom hex brands fall back to purple.** Saguaro replaces a
+  custom-hex `brand` with the `purple` palette, so `accent-*` tokens are purple
+  in dark mode for every custom brand. Named palettes are unaffected.
+
+Use the semantic tokens rather than `neutral` steps directly. They keep working
+when dark mode arrives. Code that hard-codes a `neutral` step for a light or dark
+look will flip.

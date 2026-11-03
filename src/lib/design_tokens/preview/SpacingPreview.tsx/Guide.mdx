@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+import * as SpacingStories from './_.stories';
+
+<Meta of={SpacingStories} />
+
+# Spacing
+
+Use spacer tokens for every `gap`, `padding` and `margin`. The scale has three
+bands, and the band tells you roughly where a value belongs:
+
+| Band | Tokens | Values | Use for |
+|---|---|---|---|
+| **Sm** | `spacer-sm-1`–`spacer-sm-3` | `0.125rem`–`0.5rem` | Space *inside* a component: icon-to-label gaps, gaps between chips or badges, tight vertical padding. |
+| **Md** | `spacer-md-1`–`spacer-md-3` | `0.75rem`–`1.5rem` | A component's own padding: buttons, menu rows, inputs, card bodies. |
+| **Lg** | `spacer-lg-1`–`spacer-lg-4` | `2rem`–`4rem` | Space *between* sections, and padding of large containers: modals, page content, empty states. |
+
+These are tendencies, not hard rules. When in doubt, match a nearby existing
+component.
+
+## Reference points
+
+| Component | Spacing |
+|---|---|
+| Button | padding `spacer-sm-2` top and bottom, `spacer-md-2` sides; icon gap `spacer-sm-3` |
+| Menu option | padding `spacer-sm-3` top and bottom, `spacer-md-2` sides; gap `spacer-md-1` |
+| Text input | side padding `spacer-md-2` |
+| Modal frame | desktop `spacer-lg-2` sides and top, `spacer-lg-1` bottom; mobile `spacer-md-2` all round |
+| Empty state | vertical padding `spacer-lg-4` |
+
+`spacer-sm-3` (`0.5rem`) and `spacer-md-2` (`1rem`) are by far the most used. They are
+the right default gap and default padding when nothing else applies.
+
+## Don't
+
+- Interpolate between steps. If a design calls for `0.625rem`, use the nearer
+  token.
+- Use spacers for widths, heights or positions. Use a height token or a
+  layout-specific value instead.

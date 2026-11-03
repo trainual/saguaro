@@ -8,13 +8,21 @@ import SaguaroThemeProvider from '../src/lib/components/SaguaroThemeProvider';
 
 import { useColorTokens } from '../src/lib';
 
-export const parameters = {
+// Storybook reads storySort from the default export's parameters, so these
+// must stay attached to `preview` below.
+const parameters = {
   darkMode: {
     // Add overrides here for light theme
     light: { ...themes.normal },
 
     // Add overrides here for dark theme
     dark: { ...themes.dark },
+  },
+  options: {
+    storySort: {
+      method: 'alphabetical',
+      order: ['Overview', 'Design Tokens', ['Overview', '*'], 'Components', ['Overview', '*']],
+    },
   },
 };
 
@@ -54,6 +62,7 @@ export const globalTypes = {
 };
 
 const preview: Preview = {
+  parameters,
   decorators: [
     (Story, context) => {
       const componentStoryTheme =
