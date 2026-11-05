@@ -1,0 +1,17 @@
+{
+  "name": "@saguaro/storybook-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hosted MCP server for Saguaro's published Storybook",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@storybook/mcp": "0.8.0",
+    "srvx": "^0.8.16"
+  }
+}

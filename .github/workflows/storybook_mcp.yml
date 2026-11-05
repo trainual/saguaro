@@ -1,0 +1,60 @@
+# Rebuilds and deploys the server when its code changes. Docs updates don't
+# need this; the server reads them from the published Storybook.
+name: 'Deploy: Storybook MCP'
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'tools/storybook-mcp/**'
+      - '.github/workflows/storybook_mcp.yml'
+  workflow_dispatch:
+
+# From `terraform output github_deploy_config`. Not secret.
+env:
+  IMAGE: us-central1-docker.pkg.dev/trainual-ci/cloud-run-source-deploy/storybook-mcp-saguaro
+  REGION: us-central1
+  SERVICE: storybook-mcp-saguaro
+
+# id-token: write lets the job sign in to GCP without a key.
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          workload_identity_provider: 'projects/251918605372/locations/global/workloadIdentityPools/storybook-mcp-github/providers/github'
+          service_account: 'sb-mcp-saguaro-deploy@trainual-ci.iam.gserviceaccount.com'
+
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
+
+      - name: Configure Docker for Artifact Registry
+        run: gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
+
+      - name: Build and push image
+        run: |
+          docker build -t "$IMAGE:${{ github.sha }}" -t "$IMAGE:latest" tools/storybook-mcp
+          docker push "$IMAGE:${{ github.sha }}"
+          docker push "$IMAGE:latest"
+
+      # Terraform ignores the image, so this doesn't conflict with it.
+      - name: Roll out to Cloud Run
+        run: |
+          gcloud run services update "$SERVICE" \
+            --region "$REGION" \
+            --image "$IMAGE:${{ github.sha }}" \
+            --quiet
+
+      - name: Smoke test
+        run: |
+          URL=$(gcloud run services describe "$SERVICE" --region "$REGION" --format='value(status.url)')
+          curl --fail --silent --show-error "$URL/healthz"
