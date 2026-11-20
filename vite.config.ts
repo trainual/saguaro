@@ -12,17 +12,18 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/lib/index.ts"),
+      entry: path.resolve(import.meta.dirname, "src/lib/index.ts"),
       name: "Saguaro",
       formats: ["es", "umd"],
       fileName: (format) => `saguaro.${format}.js`,
     },
-    rollupOptions: {
-      external: ["react", "react-dom", "styled-components"],
+    rolldownOptions: {
+      external: ["react", "react-dom", "react/jsx-runtime", "styled-components"],
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
+          "react/jsx-runtime": "ReactJSXRuntime",
           "styled-components": "styled",
         },
       },
