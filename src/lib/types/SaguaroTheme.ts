@@ -18,8 +18,9 @@ interface SaguaroTheme {
 }
 
 declare module 'styled-components' {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  interface DefaultTheme extends SaguaroTheme { }
+  // Module augmentation requires an interface; the theme shape is inherited.
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  interface DefaultTheme extends SaguaroTheme {}
 }
 
 export default SaguaroTheme;

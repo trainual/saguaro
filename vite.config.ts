@@ -12,12 +12,12 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/lib/index.ts"),
+      entry: path.resolve(import.meta.dirname, "src/lib/index.ts"),
       name: "Saguaro",
       formats: ["es", "umd"],
       fileName: (format) => `saguaro.${format}.js`,
     },
-    rollupOptions: {
+    rolldownOptions: {
       external: ["react", "react-dom", "styled-components"],
       output: {
         globals: {
